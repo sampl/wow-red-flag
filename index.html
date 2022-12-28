@@ -77,6 +77,19 @@
       margin: 0 0 1rem;
       padding: 1rem 0;
     }
+    .copy-link {
+      display: none;
+      border: none;
+      cursor: pointer;
+      background: transparent;
+      color: #999;
+    }
+    .copy-link .material-symbols-rounded {
+      font-size: 20px;
+    }
+    .red-flag h3:hover .copy-link {
+      display: inline-block;
+    }
   </style>
 
 </head>
@@ -96,7 +109,14 @@
         flag
       </span>
       <div>
-        <h3>Guilt trip</h3>
+        <h3 id="guilt-trip">
+          Guilt trip
+          <div class="copy-link">
+            <span class="material-symbols-rounded">
+              link
+            </span>
+          </div>
+        </h3>
         <p>
           A guilt trip is a feeling of guilt or responsibility, especially an unjustified one induced by someone else.
           Creating a guilt trip in another person may be considered to be manipulation in the form of punishment for a perceived transgression.
@@ -110,6 +130,24 @@
     &copy;2022<script>new Date().getFullYear()>2022&&document.write("-"+new Date().getFullYear());</script>
   </footer>
 
+  <script>
+    // https://stackoverflow.com/a/45071478/1061063
+    const copyButton = document.querySelector(".copy-link")
+
+    copyButton.onclick = function() {
+      document.execCommand("copy")
+    }
+
+    copyButton.addEventListener("copy", function(event) {
+      event.preventDefault()
+      if (event.clipboardData) {
+        const headingId = copyButton.parentElement.id
+        event.clipboardData.setData("text/plain", window.location + "#" + headingId)
+        console.log(event.clipboardData.getData("text"))
+      }
+    })
+
+  </script>
 </body>
 
 </html>
