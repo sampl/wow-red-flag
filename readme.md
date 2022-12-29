@@ -10,20 +10,26 @@ To run the site: `npm start`
 
 ## To do
 
-- Table of contents
-- List of red flags
-- Add examples
+Soon
+
+- Finish list of red flags
+- [Social share links](https://www.npmjs.com/package/share-url)
+- Links to resources on difficult personalities - all your fault pod, body keeps the score, ramani
 - Links to support groups, therapy etc
-- Links to resources on difficult personalities
 - Link to donate to anti-abuse orgs
-- Help hotline
 - Disclaimer
 - Contributing guidelines
-- Prettier styles
-- CC license
-- Open graph preview image
-- Robots.txt & humans.txt
-- Set up form for suggestions by non-developers
 - Make repo public
 - Github pages hosting
 - DNS
+- CC license
+- Open graph preview image
+- Set up form for suggestions by non-developers
+
+Maybe
+
+- Table of contents
+- Separate yellow flags?
+- Add examples
+- Video introduction - see otter or Just Press Record for script draft
+- Prettier styles
