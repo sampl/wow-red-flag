@@ -109,7 +109,7 @@
       margin: 0 0 1rem;
       padding: 1rem 0;
     }
-    .red-flag .icon {
+    .red-flag .emoji {
       border-radius: 50%;
       height: 3rem;
       width: 3rem;
@@ -117,6 +117,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 30px;
     }
     [v-cloak] {
       color: transparent !important;
@@ -173,6 +174,11 @@
     </div>
 
     <hr />
+
+    <div id="app" v-cloak>
+      <div class="red-flag" v-for="redFlag in redFlags">
+        <div class="emoji">
+          {{ redFlag.emoji }}
         </div>
         <div>
           <h3 id="{{ redFlag.id }}">
@@ -189,6 +195,9 @@
         </div>
       </div>
     </div>
+
+    <hr />
+
   </main>
 
   <footer>
@@ -219,10 +228,58 @@
 
     const redFlags = [
       {
-        id: 'guilt-trip',
-        title: 'Guilt trip',
-        icon: 'flag',
-        description: 'A guilt trip is a feeling of guilt or responsibility, especially an unjustified one induced by someone else.Creating a guilt trip in another person may be considered to be manipulation in the form of punishment for a perceived transgression. <a href="https://en.wikipedia.org/wiki/Guilt_trip">Link</a>'
+        id: 'guilt-trips',
+        title: 'Guilt trips',
+        emoji: '😿',
+        description: 'Weaponizing guilt, accusing others of mistakes or negligence, blaming others for things in their life not going their way, implying that others are failing them, manipulating situations to punish when they feel they have been wronged.'
+      },
+      {
+        id: 'arrogance',
+        title: 'Arrogance',
+        emoji: '😤',
+        description: 'Belief that they are better than other people, feeling entitled to resources that are not theirs, controlling or manipulating others to get what they want.'
+      },
+      {
+        id: 'self-awareness',
+        title: 'Low self awareness',
+        emoji: '🙈',
+        description: 'Inability or refusal to understand how their behavior impacts others, stonewalling, avoiding self-reflection, making excuses.'
+      },
+      {
+        id: 'relationship-history',
+        title: 'Turbulent relationship history',
+        emoji: '💔',
+        description: 'Report a consistent pattern of past toxic relationships, claiming others are "out to get them", history of infidelity, name-calling or disrespecting past partners or friends.'
+      },
+      {
+        id: 'therapy',
+        title: 'Avoiding therapy',
+        emoji: '🛋',
+        description: 'Avoiding professional help even when they report extreme distress, not staying in therapy, making excuses not to go, only trying alternative therapies, seeking out therapists who enable and do not challenge.'
+      },
+      {
+        id: 'idolizing',
+        title: 'Idolizing',
+        emoji: '👼',
+        description: 'Over-the-top praise, boosting egos when they have something to gain, lavish compliments, grand gestures of affection, love bombing.'
+      },
+      {
+        id: 'negging',
+        title: 'Negging',
+        emoji: '🫠',
+        description: 'Condescending comments and advice, backhanded compliments, cutting people down, specifically when others they get status or attention.'
+      },
+      {
+        id: 'anger',
+        title: 'Out of control anger',
+        emoji: '😡',
+        description: 'Tantrums, explosive and volatile reactions to not getting attention or getting their way, accusations and blame, yelling, fighting.'
+      },
+      {
+        id: 'responsibility',
+        title: 'Avoiding responsibility',
+        emoji: '✋',
+        description: 'Refusal to acknowledge consequences of their behavior, inability to accept that their decisions, deflecting responsibility onto others instead of themselves.'
       },
     ]
 
