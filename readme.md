@@ -19,7 +19,6 @@ A list of patterns found in difficult relationships
 - Open graph preview image
 - Robots.txt & humans.txt
 - Set up form for suggestions by non-developers
-- Vue js?
 - Make repo public
 - Github pages hosting
 - DNS

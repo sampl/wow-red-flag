@@ -87,6 +87,9 @@
       align-items: center;
       justify-content: center;
     }
+    [v-cloak] {
+      color: transparent !important;
+    }
     .copy-link {
       display: none;
       border: none;
@@ -115,26 +118,26 @@
 
     <hr />
 
-    <div class="red-flag">
-      <div class="icon">
-        <span class="material-symbols-rounded">
-          flag
-        </span>
-      </div>
-      <div>
-        <h3 id="guilt-trip">
-          Guilt trip
-          <div class="copy-link">
-            <span class="material-symbols-rounded">
-              link
-            </span>
-          </div>
-        </h3>
-        <p>
-          A guilt trip is a feeling of guilt or responsibility, especially an unjustified one induced by someone else.
-          Creating a guilt trip in another person may be considered to be manipulation in the form of punishment for a perceived transgression.
-          <a href="https://en.wikipedia.org/wiki/Guilt_trip">Link</a>
-        </p>
+    <div id="app" v-cloak>
+      <div class="red-flag" v-for="redFlag in redFlags">
+        <div class="icon">
+          <span class="material-symbols-rounded">
+            {{ redFlag.icon }}
+          </span>
+        </div>
+        <div>
+          <h3 id="{{ redFlag.id }}">
+            {{ redFlag.title }}
+            <div class="copy-link">
+              <span class="material-symbols-rounded">
+                link
+              </span>
+            </div>
+          </h3>
+          <p>
+            {{ redFlag.description }}
+          </p>
+        </div>
       </div>
     </div>
   </main>
@@ -161,6 +164,28 @@
     })
 
   </script>
+
+  <script type="module">
+    import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+    const redFlags = [
+      {
+        id: 'guilt-trip',
+        title: 'Guilt trip',
+        icon: 'flag',
+        description: 'A guilt trip is a feeling of guilt or responsibility, especially an unjustified one induced by someone else.Creating a guilt trip in another person may be considered to be manipulation in the form of punishment for a perceived transgression. <a href="https://en.wikipedia.org/wiki/Guilt_trip">Link</a>'
+      },
+    ]
+
+    createApp({
+      data() {
+        return {
+          redFlags,
+        }
+      }
+    }).mount('#app')
+  </script>
+
 </body>
 
 </html>
