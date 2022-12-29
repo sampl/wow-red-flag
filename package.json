@@ -1,0 +1,10 @@
+{
+  "name": "wowredflag",
+  "version": "0.0.1",
+  "description": "A list of patterns found in difficult relationships",
+  "homepage": "https://wowredflag.com/",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "serve ."
+  }
+}

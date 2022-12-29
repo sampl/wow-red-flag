@@ -2,9 +2,14 @@
 
 A list of patterns found in difficult relationships
 
+## Development
+
+First install a basic web server: `npm install --global serve`
+
+To run the site: `npm start`
+
 ## To do
 
-- Introduction
 - Table of contents
 - List of red flags
 - Add examples
