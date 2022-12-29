@@ -25,6 +25,7 @@ Soon
 - CC license
 - Open graph preview image
 - Set up form for suggestions by non-developers
+- Google Analytics
 
 Maybe
 
