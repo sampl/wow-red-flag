@@ -1,10 +1,88 @@
 ---
-import PageContent from '../content/index.mdx';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import { redFlagCategories } from "../data/redFlags";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const categoryIds = Object.fromEntries(
+  redFlagCategories.map((category) => [
+    category.title,
+    `category-${category.title.toLowerCase().replaceAll(" ", "-")}`,
+  ]),
+);
 ---
 
 <BaseLayout
   title="Wow, red flag..."
   description="A list of patterns found in difficult relationships."
-  ><article class="content-card"><PageContent /></article></BaseLayout
 >
+  <article class="content-card">
+    <header class="intro">
+      <img
+        class="logo"
+        src="/icon.png"
+        width="160"
+        height="160"
+        alt="A red flag"
+      />
+      <h1>"Wow, red flag..."</h1>
+    </header>
+
+    <p>
+      A list of behaviors and personality attributes commonly associated with
+      toxic relationships.
+    </p>
+
+    <nav class="table-of-contents" aria-label="Categories">
+      <ul>
+        {
+          redFlagCategories.map((category) => (
+            <li>
+              <a href={`#${categoryIds[category.title]}`}>{category.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    {
+      redFlagCategories.map((category) => (
+        <section
+          class="red-flag-category"
+          aria-labelledby={categoryIds[category.title]}
+        >
+          <h2 id={categoryIds[category.title]}>{category.title}</h2>
+          <ul>
+            {category.flags.map((flag) => (
+              <li class="red-flag" id={flag.id}>
+                <strong>
+                  <a href={`#${flag.id}`}>{flag.title}</a>
+                </strong>{" "}
+                — {flag.description}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+
+    <h2 id="disclaimer">A note about this list</h2>
+
+    <p>
+      This site offers general educational information, not a diagnosis or
+      medical, mental-health, legal, or professional advice. Every relationship
+      and situation is different. If you are in immediate danger, contact local
+      emergency services or a qualified crisis resource.
+    </p>
+
+    <aside class="safety-notice" aria-labelledby="safety-notice-title">
+      <h2 id="safety-notice-title">
+        Are you or a loved one in physical danger?
+      </h2>
+      <p>
+        Call your local emergency number. In the United States, you can also
+        contact the National Domestic Violence Hotline at <a
+          href="tel:8007997233">800-799-7233</a
+        >.
+      </p>
+    </aside>
+  </article>
+</BaseLayout>
