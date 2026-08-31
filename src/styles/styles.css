@@ -162,6 +162,9 @@ li {
 .site-footer a {
   color: inherit;
 }
+.site-footer nav a {
+  color: var(--color-text-primary);
+}
 .site-footer a:hover {
   color: var(--color-text-primary);
 }

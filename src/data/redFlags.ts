@@ -21,7 +21,10 @@ const categorySources: RedFlagCategorySource[] = [
         "DARVO",
         "Deny, Attack, and Reverse Victim and Offender when confronted.",
       ],
-      ["Deflection", "Redirecting a discussion away from their behavior."],
+      [
+        "Deflection",
+        "Redirecting a discussion away from their behavior; whataboutism is a common form.",
+      ],
       [
         "Double binds",
         "Creating situations where either choice can be used against you.",
@@ -36,7 +39,7 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Feigning helplessness",
-        "Claiming inability in order to make you take responsibility for them.",
+        "Weaponized incompetence: intentionally claiming or performing inability so responsibility shifts to another person.",
       ],
       [
         "Gaslighting",
@@ -83,14 +86,9 @@ const categorySources: RedFlagCategorySource[] = [
         "Using threats of consequences to force a choice, particularly where ordinary negotiation would be possible.",
       ],
       [
-        "Weaponized incompetence",
-        "Deliberately or conveniently doing things badly so you will take them over.",
-      ],
-      [
         "Weaponized vulnerability",
         "Using disclosures, distress, trauma, or emotional crises to prevent you from setting boundaries.",
       ],
-      ["Whataboutism", "Answering criticism by bringing up something you did."],
     ],
   },
   {
@@ -128,7 +126,14 @@ const categorySources: RedFlagCategorySource[] = [
         "Lying by omission",
         "Withholding material information so that someone reaches a false conclusion.",
       ],
-      ["Minimization", "“It wasn't that bad.”"],
+      [
+        "Maintaining a secret committed relationship",
+        "Concealing another committed relationship or presenting an agreed-upon monogamous relationship as exclusive when it is not.",
+      ],
+      [
+        "Minimization",
+        "Portraying a concern, experience, or harm as insignificant, unimportant, or ridiculous.",
+      ],
       [
         "Plausible deniability",
         "Behaving in ways that are deliberately difficult to call out or prove.",
@@ -139,7 +144,7 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Putting words in your mouth",
-        "Misrepresenting what you said or believe so it is easier to dismiss or attack.",
+        "Straw-manning: misrepresenting what someone said or believes so it is easier to dismiss or attack.",
       ],
       [
         "Revisionist history",
@@ -156,14 +161,6 @@ const categorySources: RedFlagCategorySource[] = [
       [
         "Semantic arguments",
         "Obsessing over wording to avoid addressing the substance of a complaint.",
-      ],
-      [
-        "Straw-manning",
-        "Replacing your actual position with an exaggerated version that's easier to attack.",
-      ],
-      [
-        "Trivializing",
-        "Portraying something important to you as ridiculous or insignificant.",
       ],
     ],
   },
@@ -200,15 +197,11 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Hot-and-cold behavior",
-        "Alternating intense closeness with sudden distance.",
+        "Intermittent reinforcement: an unpredictable alternation between affection or reward and rejection or mistreatment.",
       ],
       [
         "Idealization",
         "Placing you on a pedestal in an intense or unrealistic way.",
-      ],
-      [
-        "Intermittent reinforcement",
-        "Unpredictably alternating affection/reward with rejection or mistreatment, which can make the relationship unusually difficult to disengage from.",
       ],
       [
         "Love bombing",
@@ -237,7 +230,7 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Belittling",
-        "Speaking or acting in ways that make someone feel small, incapable, or unworthy.",
+        "Belittling, mockery, or ridicule that makes someone feel small, incapable, or unworthy.",
       ],
       [
         "Contempt",
@@ -249,7 +242,7 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Humiliation",
-        "Causing shame or embarrassment to diminish someone or gain control over them.",
+        "Causing shame or embarrassment to diminish someone or gain control over them, especially in public.",
       ],
       [
         "Intimidation",
@@ -260,10 +253,6 @@ const categorySources: RedFlagCategorySource[] = [
         "Using posture, proximity, gestures, or facial expressions to make someone feel afraid.",
       ],
       [
-        "Mockery",
-        "Ridiculing someone’s words, feelings, or traits to dismiss or hurt them.",
-      ],
-      [
         "Name-calling",
         "Using insulting labels to demean someone or undermine their self-worth.",
       ],
@@ -272,16 +261,8 @@ const categorySources: RedFlagCategorySource[] = [
         "Deliberately provoking a reaction and then criticizing the reaction.",
       ],
       [
-        "Public humiliation",
-        "Shaming or degrading someone in front of other people.",
-      ],
-      [
         "Punching walls / throwing objects",
         "Violence around someone can function as intimidation even when they aren't physically struck.",
-      ],
-      [
-        "Punitive withdrawal",
-        "Withdrawing contact or support specifically to punish.",
       ],
       [
         "Rage episodes",
@@ -308,8 +289,8 @@ const categorySources: RedFlagCategorySource[] = [
         "Hinting at harmful consequences without saying them directly.",
       ],
       [
-        "Withholding",
-        "Deliberately withholding information, affection, money, cooperation, etc. as leverage.",
+        "Withholding as punishment or leverage",
+        "Deliberately withholding contact, support, affection, information, or cooperation as punishment or leverage.",
       ],
     ],
   },
@@ -357,6 +338,10 @@ const categorySources: RedFlagCategorySource[] = [
         "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
+        "Demanding constant updates",
+        "Continually demanding updates about someone's whereabouts or activities, including immediate response expectations.",
+      ],
+      [
         "Demanding permission for ordinary independent decisions.",
         "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
@@ -378,27 +363,23 @@ const categorySources: RedFlagCategorySource[] = [
         "Controlling access to essentials such as money, housing, transportation, or information.",
       ],
       [
-        "Jealousy framed as protection",
-        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
+        "Household labor inequality",
+        "Consistently expecting one partner to carry an unfair share of domestic work, care work, or planning.",
       ],
       [
-        "Location-tracking demands",
-        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
+        "Jealousy or possessiveness framed as care",
+        "Controlling conduct portrayed as protection, care, or love.",
       ],
       [
         "Micromanagement",
         "Excessively directing everyday decisions or tasks to reduce another person’s independence.",
       ],
       [
-        "Monitoring",
-        "Demanding constant updates about where you are or what you're doing.",
+        "Non-consensual location tracking",
+        "Demanding access to, placing, or using an app or device to track someone's movements or location without their agreement.",
       ],
       [
         "Password demands",
-        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
-      ],
-      [
-        "Possessiveness framed as love",
         "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
@@ -409,7 +390,6 @@ const categorySources: RedFlagCategorySource[] = [
         "Sexual coercion",
         "Pressure, threats, guilt, persistence, or retaliation used to obtain sexual activity rather than freely given consent.",
       ],
-      ["Surveillance", "Checking phones, messages, location, browsing, etc."],
     ],
   },
   {
@@ -417,31 +397,23 @@ const categorySources: RedFlagCategorySource[] = [
     flags: [
       [
         "Creating conflicts with your support network",
-        "Starting or escalating disputes that strain relationships with friends, family, or community.",
+        "Starting or escalating disputes with friends, family, or community, including picking fights before or after outings so socializing becomes difficult.",
+      ],
+      [
+        "Demanding constant availability and attention",
+        "Demanding so much availability and attention that other relationships, responsibilities, or rest are crowded out.",
       ],
       [
         "Demanding loyalty tests",
-        "Requiring proofs of allegiance that put relationships, values, or independence at risk.",
+        "Requiring proofs of allegiance or testing your loyalty in ways that put relationships, values, or independence at risk.",
       ],
       [
         "Dependency creation",
         "Systematically making you more reliant on them financially, socially, practically, or emotionally.",
       ],
       [
-        "Discouraging outside perspectives",
-        "Separating someone from supportive people or outside perspectives so they become more dependent.",
-      ],
-      [
         "Discrediting friends and family",
         "Convincing you that everyone close to you is bad for you.",
-      ],
-      [
-        "Making socializing “not worth it”",
-        "Starting fights before/after outings until you stop going.",
-      ],
-      [
-        "Monopolizing your time",
-        "Demanding so much attention that other relationships, responsibilities, or rest are crowded out.",
       ],
       [
         "Punishing independence",
@@ -456,8 +428,8 @@ const categorySources: RedFlagCategorySource[] = [
         "Progressively separating you from friends, family, coworkers, or community.",
       ],
       [
-        "Us-against-the-world framing",
-        "Separating someone from supportive people or outside perspectives so they become more dependent.",
+        "Us against the world",
+        "Isolating someone from supportive people and outside viewpoints to increase dependency.",
       ],
     ],
   },
@@ -478,10 +450,6 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Demanding proof of fidelity",
-        "Treating ordinary independence or social contact as evidence of disloyalty in order to justify control.",
-      ],
-      [
-        "Demanding you block people",
         "Treating ordinary independence or social contact as evidence of disloyalty in order to justify control.",
       ],
       [
@@ -518,10 +486,6 @@ const categorySources: RedFlagCategorySource[] = [
     title: "Social manipulation",
     flags: [
       [
-        "Character assassination",
-        "Spreading damaging claims to undermine someone’s reputation and credibility.",
-      ],
-      [
         "Comparison",
         "Repeatedly comparing you unfavorably with exes, friends, siblings, etc.",
       ],
@@ -534,10 +498,6 @@ const categorySources: RedFlagCategorySource[] = [
         "Creating rivalry or conflict between people to gain influence or control.",
       ],
       [
-        "Proxy harassment",
-        "Recruiting other people to contact, pressure, monitor, or intimidate you.",
-      ],
-      [
         "Public/private personality switching",
         "Behaving charmingly around others while treating you very differently in private.",
       ],
@@ -547,7 +507,15 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Smear campaigns",
-        "Attempting to damage your reputation, particularly after confrontation or separation.",
+        "Spreading damaging claims to undermine your reputation or credibility—often called character assassination—particularly after confrontation or separation.",
+      ],
+      [
+        "Splitting",
+        "Casting people as entirely good or bad and abruptly reversing that view in ways that create conflict, instability, or pressure.",
+      ],
+      [
+        "Third-party pressure or harassment",
+        "Using other people or shared contacts to pressure, monitor, intimidate, relay messages, or bypass boundaries.",
       ],
       [
         "Triangulation",
@@ -557,14 +525,10 @@ const categorySources: RedFlagCategorySource[] = [
         "Using children as leverage",
         "Using children, access to them, or concerns about them to pressure or control someone.",
       ],
-      [
-        "Using mutual friends as messengers",
-        "Using shared contacts to relay pressure, monitor someone, or bypass boundaries.",
-      ],
     ],
   },
   {
-    title: "Undermining confidence and identity",
+    title: "Undermining your confidence",
     flags: [
       [
         "Approval withholding",
@@ -632,10 +596,6 @@ const categorySources: RedFlagCategorySource[] = [
     title: "Boundary violations",
     flags: [
       [
-        "Contacting you repeatedly after you've asked them to stop",
-        "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
-      ],
-      [
         "Deliberately creating “exceptions”",
         "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
       ],
@@ -644,12 +604,12 @@ const categorySources: RedFlagCategorySource[] = [
         "Using online accounts, devices, or digital activity to monitor someone without consent.",
       ],
       [
-        "Ignoring “no”",
-        "Continuing to pressure or act after a clear refusal or lack of consent.",
-      ],
-      [
         "Mocking boundaries",
         "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
+      ],
+      [
+        "Non-consensual intimate recordings",
+        "Photographing or recording someone in a vulnerable or intimate situation without their consent or after they have refused.",
       ],
       [
         "Privacy invasion",
@@ -664,12 +624,16 @@ const categorySources: RedFlagCategorySource[] = [
         "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
       ],
       [
+        "Refusing to accept ‘no’",
+        "Repeatedly disregarding a clear refusal or boundary.",
+      ],
+      [
         "Refusing to leave",
         "Remaining in someone’s space after being asked to leave in order to intimidate or control.",
       ],
       [
-        "Repeatedly renegotiating a boundary after you've clearly answered.",
-        "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
+        "Repeated unwanted contact",
+        "Continuing contact after a clear request to stop, or engaging in conduct that creates fear or disruption.",
       ],
       [
         "Sexual boundary violations",
@@ -688,10 +652,6 @@ const categorySources: RedFlagCategorySource[] = [
         "Repeated unwanted monitoring, contact, or presence that causes fear or disrupts daily life.",
       ],
       [
-        "Testing boundaries",
-        "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
-      ],
-      [
         "Treating boundaries as rejection",
         "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
       ],
@@ -702,17 +662,45 @@ const categorySources: RedFlagCategorySource[] = [
     ],
   },
   {
-    title: "Accountability problems",
+    title: "Physical safety and freedom",
     flags: [
       [
-        "Apology without behavioral change",
-        "Avoiding responsibility for harm through denial, delay, double standards, or empty gestures.",
+        "Harming or threatening to harm children, pets, or loved ones",
+        "Using harm or threats against people or animals you care about to frighten, punish, or control you.",
       ],
+      [
+        "Physical violence",
+        "Hitting, slapping, shoving, kicking, choking, restraining, or otherwise physically assaulting someone.",
+      ],
+      [
+        "Preventing emergency, medical, or legal help",
+        "Stopping someone from contacting emergency services, getting necessary care, reporting abuse, or seeking legal protection.",
+      ],
+      [
+        "Pressuring or forcing drug or alcohol use",
+        "Using pressure, coercion, or force to make someone consume drugs or alcohol, especially to lower their ability to choose or leave.",
+      ],
+      [
+        "Reckless or dangerous driving",
+        "Driving dangerously, threatening to crash, abandoning someone in an unsafe place, or using a vehicle to frighten or control them.",
+      ],
+      [
+        "Trapping or preventing you from leaving",
+        "Blocking exits, taking keys or transportation, locking someone in, or otherwise stopping them from leaving freely.",
+      ],
+      [
+        "Weapon intimidation or use",
+        "Displaying, threatening with, or using a weapon to frighten, harm, or control someone.",
+      ],
+    ],
+  },
+  {
+    title: "Accountability",
+    flags: [
       [
         "Avoiding meaningful support",
         "Repeatedly refusing appropriate support or help while ongoing harmful behavior remains unaddressed.",
       ],
-      ["Conditional apologies", "“I'm sorry, but you…”"],
       [
         "Demanding immediate forgiveness",
         "Avoiding responsibility for harm through denial, delay, double standards, or empty gestures.",
@@ -726,10 +714,6 @@ const categorySources: RedFlagCategorySource[] = [
         "Attributing harmful choices to other people, circumstances, or forces outside oneself.",
       ],
       [
-        "Keeping different rules for themselves and you",
-        "Avoiding responsibility for harm through denial, delay, double standards, or empty gestures.",
-      ],
-      [
         "Lack of self-reflection",
         "Repeatedly avoiding honest reflection on how their behavior affects others or making excuses instead of engaging with feedback.",
       ],
@@ -737,18 +721,21 @@ const categorySources: RedFlagCategorySource[] = [
         "Never apologizing",
         "Refusing to acknowledge harm or offer a genuine apology when one is warranted.",
       ],
-      ["Non-apologies", "“I'm sorry you feel that way.”"],
+      [
+        "Non-apologies",
+        "Recognizable forms include “I'm sorry, but…,” “I'm sorry you feel that way,” apologies paired with blame, and apologies used to shut down discussion.",
+      ],
       [
         "Performative remorse",
         "Displaying regret for appearance or to regain access without meaningful accountability.",
       ],
       [
-        "Refusing repair",
-        "Declining to address harm, rebuild trust, or take steps to make amends.",
+        "Promises without change",
+        "Apologies or commitments to improve that are not followed by sustained behavior change.",
       ],
       [
-        "Repeated promises to change followed by recurrence",
-        "Avoiding responsibility for harm through denial, delay, double standards, or empty gestures.",
+        "Refusing repair",
+        "Declining to address harm, rebuild trust, or take steps to make amends.",
       ],
       [
         "Retaliating when confronted",
@@ -768,14 +755,6 @@ const categorySources: RedFlagCategorySource[] = [
     title: "Relationship destabilization",
     flags: [
       [
-        "Breakup threats",
-        "Threatening to end the relationship to force compliance or silence concerns.",
-      ],
-      [
-        "Chaos creation",
-        "Creating confusion, conflict, or instability that keeps others off balance.",
-      ],
-      [
         "Constant crisis mode",
         "Keeping the relationship in a recurring state of emergency that consumes attention and resources.",
       ],
@@ -792,12 +771,8 @@ const categorySources: RedFlagCategorySource[] = [
         "Creating recurring uncertainty, conflict, or crises that keep the relationship off balance.",
       ],
       [
-        "Manufactured crises",
-        "Inventing or escalating emergencies to gain attention, control, or compliance.",
-      ],
-      [
-        "Picking fights before important events",
-        "Creating recurring uncertainty, conflict, or crises that keep the relationship off balance.",
+        "Manufactured chaos",
+        "Inventing or escalating crises or emergencies to gain attention, control, or compliance.",
       ],
       [
         "Recurring harmful relationship patterns",
@@ -808,15 +783,11 @@ const categorySources: RedFlagCategorySource[] = [
         "Creating recurring uncertainty, conflict, or crises that keep the relationship off balance.",
       ],
       [
-        "Sabotaging birthdays, holidays, work events, etc.",
-        "Creating recurring uncertainty, conflict, or crises that keep the relationship off balance.",
+        "Sabotaging important events",
+        "Undermining birthdays, holidays, work events, or other important occasions, including by picking fights as a tactic.",
       ],
       [
         "Sleep deprivation through conflict",
-        "Creating recurring uncertainty, conflict, or crises that keep the relationship off balance.",
-      ],
-      [
-        "Testing your loyalty",
         "Creating recurring uncertainty, conflict, or crises that keep the relationship off balance.",
       ],
       [
@@ -830,39 +801,15 @@ const categorySources: RedFlagCategorySource[] = [
     ],
   },
   {
-    title: "Digital forms",
+    title: "Digital red flags",
     flags: [
-      [
-        "Account monitoring",
-        "Reviewing someone’s online accounts or activity to track or control them.",
-      ],
-      [
-        "Checking screen time/activity",
-        "Using technology or online access to monitor, pressure, impersonate, or control someone.",
-      ],
       [
         "Controlling what you post",
         "Using technology or online access to monitor, pressure, impersonate, or control someone.",
       ],
       [
-        "Cyberstalking",
-        "Using digital tools or platforms to repeatedly monitor, contact, or harass someone.",
-      ],
-      [
-        "Demanding immediate text responses",
-        "Using technology or online access to monitor, pressure, impersonate, or control someone.",
-      ],
-      [
-        "Demanding passwords",
-        "Using technology or online access to monitor, pressure, impersonate, or control someone.",
-      ],
-      [
-        "Digital isolation",
-        "Blocking/deleting contacts or interfering with someone's accounts.",
-      ],
-      [
-        "Excessive calling/texting",
-        "Using technology or online access to monitor, pressure, impersonate, or control someone.",
+        "Forcing digital isolation",
+        "Blocking or deleting contacts, or coercing someone to block people, to limit communication or social support.",
       ],
       [
         "Image-based abuse",
@@ -873,20 +820,12 @@ const categorySources: RedFlagCategorySource[] = [
         "Pretending to be someone else online to deceive, monitor, or damage them.",
       ],
       [
-        "Location surveillance",
-        "Using devices, apps, or accounts to track someone’s whereabouts without consent.",
-      ],
-      [
-        "Reading DMs",
-        "Using technology or online access to monitor, pressure, impersonate, or control someone.",
+        "Online activity monitoring",
+        "Monitoring someone's online accounts, screen time, or digital activity to track or control them.",
       ],
       [
         "Technology-facilitated coercive control",
         "Using technology or online access to monitor, pressure, impersonate, or control someone.",
-      ],
-      [
-        "Tracking devices",
-        "Placing or using technology to follow someone’s movements without their knowledge or agreement.",
       ],
       [
         "Unauthorized account access",
