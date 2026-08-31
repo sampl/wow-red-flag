@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping improve Wow, red flag. This is a maintainer-led project, so please submit ideas through [GitHub Issues](https://github.com/sampl/wow-red-flag/issues) rather than opening pull requests.
+Thank you for helping improve [wowredflag.com]. This is a maintainer-led project, so please submit ideas through [GitHub Issues](https://github.com/sampl/wow-red-flag/issues) rather than opening pull requests.
 
 ## What to suggest
 

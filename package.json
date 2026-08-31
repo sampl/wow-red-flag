@@ -17,7 +17,6 @@
     "spellcheck": "cspell ."
   },
   "dependencies": {
-    "@astrojs/mdx": "^7.0.8",
     "astro": "^7.2.9"
   },
   "devDependencies": {
