@@ -165,7 +165,7 @@ const categorySources: RedFlagCategorySource[] = [
     ],
   },
   {
-    title: "Affection as a means of control",
+    title: "Affection as control",
     flags: [
       [
         "Boundary testing",
@@ -222,7 +222,7 @@ const categorySources: RedFlagCategorySource[] = [
     ],
   },
   {
-    title: "Punishment and conflict tactics",
+    title: "Punishment and conflicts",
     flags: [
       [
         "“Jokes” at your expense",
@@ -434,7 +434,7 @@ const categorySources: RedFlagCategorySource[] = [
     ],
   },
   {
-    title: "Jealousy and possessiveness",
+    title: "Jealousy & possessiveness",
     flags: [
       [
         "Accusations of cheating without reasonable basis",
@@ -528,7 +528,7 @@ const categorySources: RedFlagCategorySource[] = [
     ],
   },
   {
-    title: "Undermining your confidence",
+    title: "Undermining confidence",
     flags: [
       [
         "Approval withholding",
@@ -593,7 +593,7 @@ const categorySources: RedFlagCategorySource[] = [
     ],
   },
   {
-    title: "Boundary violations",
+    title: "Boundaries",
     flags: [
       [
         "Deliberately creating “exceptions”",
@@ -662,7 +662,7 @@ const categorySources: RedFlagCategorySource[] = [
     ],
   },
   {
-    title: "Physical safety and freedom",
+    title: "Physical safety",
     flags: [
       [
         "Harming or threatening to harm children, pets, or loved ones",

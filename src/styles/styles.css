@@ -7,7 +7,8 @@
   --color-link-hover: #541512;
   --color-focus: #edb24b;
   --color-divider: rgb(74 36 31 / 35%);
-  --color-safety: #fff3c9;
+  --color-safety: #fff3c96e;
+  --color-anchor-highlight: #fff3c9;
   --color-safety-accent: #c7463c;
   --color-input: #f2e9e6;
   --color-button-text: #fff;
@@ -69,7 +70,7 @@ h3 {
 }
 h1 {
   margin: 0 0 1.5rem;
-  font-size: clamp(2.25rem, 7vw, 3.75rem);
+  font-size: clamp(2.25rem, 6vw, 3.75rem);
   font-weight: 500;
 }
 h2 {
@@ -111,14 +112,21 @@ li {
 }
 .safety-notice h2 {
   margin: 0 0 0.5rem;
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
 }
 .safety-notice p {
   margin: 0;
 }
 .red-flag {
   margin-block: 0.55rem;
+  scroll-margin-top: 1rem;
+}
+.red-flag:target {
+  padding: 0.2rem 0.4rem;
+  margin-left: -0.4rem;
+  border-radius: 0.2rem;
+  background: var(--color-anchor-highlight);
 }
 .red-flag strong {
   font-weight: 600;
