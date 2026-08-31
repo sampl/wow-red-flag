@@ -1,36 +1,39 @@
-# Wow red flag
+# Wow, red flag
 
-A list of patterns found in difficult relationships
+A community resource listing patterns that may show up in difficult relationships.
 
-## Development
+The site is published from this repository as a static Astro site. Read [DEVELOPERS.md](DEVELOPERS.md) to run, check, build, and publish it. Read [CONTRIBUTING.md](CONTRIBUTING.md) to suggest a change, and [CONDUCT.md](CONDUCT.md) for our community standards.
 
-First install a basic web server: `npm install --global serve`
+## License
 
-To run the site: `npm start`
+Original site content is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
 
-## To do
+## Future ideas
 
-Soon
+## TODO
+
+### Private alpha
+
+- Expand the list of red flags and add carefully sourced resources
+
+### Public beta
 
 - Finish list of red flags
 - [Social share links](https://www.npmjs.com/package/share-url)
 - Links to resources on difficult personalities - all your fault pod, body keeps the score, ramani
-- Links to support groups, therapy etc
-- Link to donate to anti-abuse orgs
-- Disclaimer
-- Contributing guidelines
-- Make repo public
-- Github pages hosting
-- DNS
-- CC license
+- Links to support groups, therapy, and anti-abuse orgs
 - Open graph preview image
-- Set up form for suggestions by non-developers
-- Google Analytics
+- Add examples
 
-Maybe
+### Launch
+
+- Style - Create an original water-and-red-flags illustration with a distinct retro ski-game feeling.
+- Make repo public
+
+### Later
+
+### Maybe
 
 - Table of contents
 - Separate yellow flags?
-- Add examples
 - Video introduction - see otter or Just Press Record for script draft
-- Prettier styles

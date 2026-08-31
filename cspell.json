@@ -1,0 +1,25 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "useGitignore": true,
+  "words": [
+    "Astro",
+    "Codependency",
+    "Formspree",
+    "github",
+    "MDX",
+    "Narcissistic",
+    "negging",
+    "Piercelolla",
+    "sampl",
+    "SkiFree",
+    "stonewalling",
+    "wowredflag"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "dist/**",
+    "package-lock.json",
+    "LICENSE.md"
+  ]
+}

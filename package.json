@@ -1,10 +1,32 @@
 {
-  "name": "wowredflag",
-  "version": "0.0.1",
-  "description": "A list of patterns found in difficult relationships",
+  "name": "wow-red-flag",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A list of patterns found in difficult relationships.",
   "homepage": "https://wowredflag.com/",
+  "type": "module",
   "scripts": {
     "start": "npm run dev",
-    "dev": "serve ."
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "spellcheck": "cspell ."
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^7.0.8",
+    "astro": "^7.2.9"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "cspell": "^9.8.0",
+    "eslint": "^10.9.1",
+    "eslint-plugin-astro": "^1.7.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^5.9.3"
   }
 }

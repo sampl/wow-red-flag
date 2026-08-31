@@ -1,0 +1,8 @@
+---
+const { id, title, emoji } = Astro.props;
+---
+
+<section class="red-flag" aria-labelledby={id}>
+  <div class="emoji" aria-hidden="true">{emoji}</div>
+  <div><h3 id={id}><a href={`#${id}`}>{title}</a></h3><slot /></div>
+</section>
