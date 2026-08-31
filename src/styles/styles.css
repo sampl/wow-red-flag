@@ -114,15 +114,26 @@ li {
   font-size: 1.15rem;
   font-weight: 700;
 }
-.safety-notice p,
-.red-flag p {
+.safety-notice p {
   margin: 0;
 }
 .red-flag {
-  padding: 1.25rem 0;
+  margin-block: 0.55rem;
 }
 .red-flag-category h2 {
   margin-bottom: 0;
+}
+.table-of-contents {
+  margin: 2rem 0;
+}
+.table-of-contents ul {
+  padding: 0;
+  list-style: none;
+  columns: 2;
+  column-gap: 2rem;
+}
+.table-of-contents li {
+  break-inside: avoid;
 }
 .site-footer {
   margin-top: 6rem;
@@ -197,5 +208,8 @@ button:hover {
   }
   button {
     width: 100%;
+  }
+  .table-of-contents ul {
+    columns: 1;
   }
 }

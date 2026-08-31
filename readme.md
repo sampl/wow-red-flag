@@ -15,6 +15,8 @@ Original site content is licensed under [Creative Commons Attribution-ShareAlike
 ### Private alpha
 
 - For each red flag, add external links, a citation/source, an example, and an example of a healthy version of the behavior.
+- Combine similar red flags where doing so improves clarity without losing important distinctions.
+- Make each red flag a checkbox and show the number checked while the reader scrolls.
 
 ### Public beta
 

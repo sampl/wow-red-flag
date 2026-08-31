@@ -1,7 +1,38 @@
 ---
-const { id, title, description } = Astro.props;
+import { redFlagCategories } from "../data/redFlags";
+
+const categoryIds = Object.fromEntries(
+  redFlagCategories.map((category) => [
+    category.title,
+    `category-${category.title.toLowerCase().replaceAll(" ", "-")}`,
+  ]),
+);
 ---
 
-<section class="red-flag" aria-labelledby={id}>
-  <div><h3 id={id}><a href={`#${id}`}>{title}</a></h3><p>{description}</p></div>
-</section>
+<nav class="table-of-contents" aria-label="Categories">
+  <ul>
+    {
+      redFlagCategories.map((category) => (
+        <li><a href={`#${categoryIds[category.title]}`}>{category.title}</a></li>
+      ))
+    }
+  </ul>
+</nav>
+
+{
+  redFlagCategories.map((category) => (
+    <section
+      class="red-flag-category"
+      aria-labelledby={categoryIds[category.title]}
+    >
+      <h2 id={categoryIds[category.title]}>{category.title}</h2>
+      <ul>
+        {category.flags.map((flag) => (
+          <li class="red-flag" id={flag.id}>
+            <strong><a href={`#${flag.id}`}>{flag.title}</a></strong> — {flag.description}
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))
+}
