@@ -110,7 +110,7 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Half-truths",
-        "A pattern of half-truths that can undermine trust, autonomy, or emotional safety.",
+        "Presenting selected facts in a way that creates a misleading impression.",
       ],
       [
         "Interrogation",
@@ -122,11 +122,11 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Lying",
-        "A pattern of lying that can undermine trust, autonomy, or emotional safety.",
+        "Knowingly giving false information to mislead or avoid accountability.",
       ],
       [
         "Lying by omission",
-        "A pattern of lying by omission that can undermine trust, autonomy, or emotional safety.",
+        "Withholding material information so that someone reaches a false conclusion.",
       ],
       ["Minimization", "“It wasn't that bad.”"],
       [
@@ -139,7 +139,7 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Putting words in your mouth",
-        "A pattern of putting words in your mouth that can undermine trust, autonomy, or emotional safety.",
+        "Misrepresenting what you said or believe so it is easier to dismiss or attack.",
       ],
       [
         "Revisionist history",
@@ -237,35 +237,35 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Belittling",
-        "A pattern of belittling that can undermine trust, autonomy, or emotional safety.",
+        "Speaking or acting in ways that make someone feel small, incapable, or unworthy.",
       ],
       [
         "Contempt",
-        "A pattern of contempt that can undermine trust, autonomy, or emotional safety.",
+        "Treating someone with scorn, disgust, or a sense of superiority.",
       ],
       [
         "Destroying property",
-        "A pattern of destroying property that can undermine trust, autonomy, or emotional safety.",
+        "Damaging belongings or surroundings to frighten, punish, or assert power.",
       ],
       [
         "Humiliation",
-        "A pattern of humiliation that can undermine trust, autonomy, or emotional safety.",
+        "Causing shame or embarrassment to diminish someone or gain control over them.",
       ],
       [
         "Intimidation",
-        "A pattern of intimidation that can undermine trust, autonomy, or emotional safety.",
+        "Using fear, implied power, or threatening conduct to influence someone’s choices.",
       ],
       [
         "Menacing body language",
-        "A pattern of menacing body language that can undermine trust, autonomy, or emotional safety.",
+        "Using posture, proximity, gestures, or facial expressions to make someone feel afraid.",
       ],
       [
         "Mockery",
-        "A pattern of mockery that can undermine trust, autonomy, or emotional safety.",
+        "Ridiculing someone’s words, feelings, or traits to dismiss or hurt them.",
       ],
       [
         "Name-calling",
-        "A pattern of name-calling that can undermine trust, autonomy, or emotional safety.",
+        "Using insulting labels to demean someone or undermine their self-worth.",
       ],
       [
         "Needling / baiting",
@@ -273,7 +273,7 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Public humiliation",
-        "A pattern of public humiliation that can undermine trust, autonomy, or emotional safety.",
+        "Shaming or degrading someone in front of other people.",
       ],
       [
         "Punching walls / throwing objects",
@@ -285,7 +285,7 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Rage episodes",
-        "A pattern of rage episodes that can undermine trust, autonomy, or emotional safety.",
+        "Explosive anger that leaves others afraid, silenced, or focused on managing the outburst.",
       ],
       [
         "Reactive-abuse baiting",
@@ -301,11 +301,11 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Threats",
-        "A pattern of threats that can undermine trust, autonomy, or emotional safety.",
+        "Stating or implying harmful consequences to force compliance or create fear.",
       ],
       [
         "Veiled threats",
-        "A pattern of veiled threats that can undermine trust, autonomy, or emotional safety.",
+        "Hinting at harmful consequences without saying them directly.",
       ],
       [
         "Withholding",
@@ -318,47 +318,47 @@ const categorySources: RedFlagCategorySource[] = [
     flags: [
       [
         "Coercive control",
-        "A pattern of coercive control that can undermine trust, autonomy, or emotional safety.",
+        "An ongoing pattern of restrictions, intimidation, and dependency that erodes another person’s autonomy.",
       ],
       [
         "Controlling access to money",
-        "A pattern of controlling access to money that can undermine trust, autonomy, or emotional safety.",
+        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
         "Controlling clothing or appearance",
-        "A pattern of controlling clothing or appearance that can undermine trust, autonomy, or emotional safety.",
+        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
         "Controlling food",
-        "A pattern of controlling food that can undermine trust, autonomy, or emotional safety.",
+        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
         "Controlling friendships",
-        "A pattern of controlling friendships that can undermine trust, autonomy, or emotional safety.",
+        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
         "Controlling hobbies",
-        "A pattern of controlling hobbies that can undermine trust, autonomy, or emotional safety.",
+        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
         "Controlling medical care",
-        "A pattern of controlling medical care that can undermine trust, autonomy, or emotional safety.",
+        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
         "Controlling sleep",
-        "A pattern of controlling sleep that can undermine trust, autonomy, or emotional safety.",
+        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
         "Controlling transportation",
-        "A pattern of controlling transportation that can undermine trust, autonomy, or emotional safety.",
+        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
         "Controlling work or education",
-        "A pattern of controlling work or education that can undermine trust, autonomy, or emotional safety.",
+        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
         "Demanding permission for ordinary independent decisions.",
-        "A pattern of demanding permission for ordinary independent decisions that can undermine trust, autonomy, or emotional safety.",
+        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       ["Double standards", "Freedoms for themselves that they deny you."],
       [
@@ -367,27 +367,27 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Excessive rule-making",
-        "A pattern of excessive rule-making that can undermine trust, autonomy, or emotional safety.",
+        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
         "Financial abuse",
-        "A pattern of financial abuse that can undermine trust, autonomy, or emotional safety.",
+        "Restricting, exploiting, or sabotaging finances to make someone dependent.",
       ],
       [
         "Gatekeeping resources",
-        "A pattern of gatekeeping resources that can undermine trust, autonomy, or emotional safety.",
+        "Controlling access to essentials such as money, housing, transportation, or information.",
       ],
       [
         "Jealousy framed as protection",
-        "A pattern of jealousy framed as protection that can undermine trust, autonomy, or emotional safety.",
+        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
         "Location-tracking demands",
-        "A pattern of location-tracking demands that can undermine trust, autonomy, or emotional safety.",
+        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
         "Micromanagement",
-        "A pattern of micromanagement that can undermine trust, autonomy, or emotional safety.",
+        "Excessively directing everyday decisions or tasks to reduce another person’s independence.",
       ],
       [
         "Monitoring",
@@ -395,11 +395,11 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Password demands",
-        "A pattern of password demands that can undermine trust, autonomy, or emotional safety.",
+        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
         "Possessiveness framed as love",
-        "A pattern of possessiveness framed as love that can undermine trust, autonomy, or emotional safety.",
+        "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
         "Reproductive coercion",
@@ -417,11 +417,11 @@ const categorySources: RedFlagCategorySource[] = [
     flags: [
       [
         "Creating conflicts with your support network",
-        "A pattern of creating conflicts with your support network that can undermine trust, autonomy, or emotional safety.",
+        "Starting or escalating disputes that strain relationships with friends, family, or community.",
       ],
       [
         "Demanding loyalty tests",
-        "A pattern of demanding loyalty tests that can undermine trust, autonomy, or emotional safety.",
+        "Requiring proofs of allegiance that put relationships, values, or independence at risk.",
       ],
       [
         "Dependency creation",
@@ -429,7 +429,7 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Discouraging outside perspectives",
-        "A pattern of discouraging outside perspectives that can undermine trust, autonomy, or emotional safety.",
+        "Separating someone from supportive people or outside perspectives so they become more dependent.",
       ],
       [
         "Discrediting friends and family",
@@ -441,15 +441,15 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Monopolizing your time",
-        "A pattern of monopolizing your time that can undermine trust, autonomy, or emotional safety.",
+        "Demanding so much attention that other relationships, responsibilities, or rest are crowded out.",
       ],
       [
         "Punishing independence",
-        "A pattern of punishing independence that can undermine trust, autonomy, or emotional safety.",
+        "Responding to independent choices with anger, withdrawal, or other punishment.",
       ],
       [
         "Sabotaging plans",
-        "A pattern of sabotaging plans that can undermine trust, autonomy, or emotional safety.",
+        "Disrupting arrangements that support someone’s goals, relationships, or autonomy.",
       ],
       [
         "Social isolation",
@@ -457,7 +457,7 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Us-against-the-world framing",
-        "A pattern of us-against-the-world framing that can undermine trust, autonomy, or emotional safety.",
+        "Separating someone from supportive people or outside perspectives so they become more dependent.",
       ],
     ],
   },
@@ -466,39 +466,39 @@ const categorySources: RedFlagCategorySource[] = [
     flags: [
       [
         "Accusations of cheating without reasonable basis",
-        "A pattern of accusations of cheating without reasonable basis that can undermine trust, autonomy, or emotional safety.",
+        "Treating ordinary independence or social contact as evidence of disloyalty in order to justify control.",
       ],
       [
         "Checking your phone",
-        "A pattern of checking your phone that can undermine trust, autonomy, or emotional safety.",
+        "Treating ordinary independence or social contact as evidence of disloyalty in order to justify control.",
       ],
       [
         "Competing with your friends/family for attention",
-        "A pattern of competing with your friends/family for attention that can undermine trust, autonomy, or emotional safety.",
+        "Treating ordinary independence or social contact as evidence of disloyalty in order to justify control.",
       ],
       [
         "Demanding proof of fidelity",
-        "A pattern of demanding proof of fidelity that can undermine trust, autonomy, or emotional safety.",
+        "Treating ordinary independence or social contact as evidence of disloyalty in order to justify control.",
       ],
       [
         "Demanding you block people",
-        "A pattern of demanding you block people that can undermine trust, autonomy, or emotional safety.",
+        "Treating ordinary independence or social contact as evidence of disloyalty in order to justify control.",
       ],
       [
         "Interrogating you about other people",
-        "A pattern of interrogating you about other people that can undermine trust, autonomy, or emotional safety.",
+        "Treating ordinary independence or social contact as evidence of disloyalty in order to justify control.",
       ],
       [
         "Jealousy tests",
-        "A pattern of jealousy tests that can undermine trust, autonomy, or emotional safety.",
+        "Treating ordinary independence or social contact as evidence of disloyalty in order to justify control.",
       ],
       [
         "Policing social media",
-        "A pattern of policing social media that can undermine trust, autonomy, or emotional safety.",
+        "Treating ordinary independence or social contact as evidence of disloyalty in order to justify control.",
       ],
       [
         "Possessive language or behavior",
-        "A pattern of possessive language or behavior that can undermine trust, autonomy, or emotional safety.",
+        "Treating ordinary independence or social contact as evidence of disloyalty in order to justify control.",
       ],
       [
         "Retroactive jealousy",
@@ -506,11 +506,11 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Treating ordinary interactions as flirting",
-        "A pattern of treating ordinary interactions as flirting that can undermine trust, autonomy, or emotional safety.",
+        "Treating ordinary independence or social contact as evidence of disloyalty in order to justify control.",
       ],
       [
         "Treating privacy as evidence of dishonesty",
-        "A pattern of treating privacy as evidence of dishonesty that can undermine trust, autonomy, or emotional safety.",
+        "Treating ordinary independence or social contact as evidence of disloyalty in order to justify control.",
       ],
     ],
   },
@@ -519,7 +519,7 @@ const categorySources: RedFlagCategorySource[] = [
     flags: [
       [
         "Character assassination",
-        "A pattern of character assassination that can undermine trust, autonomy, or emotional safety.",
+        "Spreading damaging claims to undermine someone’s reputation and credibility.",
       ],
       [
         "Comparison",
@@ -531,7 +531,7 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Playing people against one another",
-        "A pattern of playing people against one another that can undermine trust, autonomy, or emotional safety.",
+        "Creating rivalry or conflict between people to gain influence or control.",
       ],
       [
         "Proxy harassment",
@@ -555,11 +555,11 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Using children as leverage",
-        "A pattern of using children as leverage that can undermine trust, autonomy, or emotional safety.",
+        "Using children, access to them, or concerns about them to pressure or control someone.",
       ],
       [
         "Using mutual friends as messengers",
-        "A pattern of using mutual friends as messengers that can undermine trust, autonomy, or emotional safety.",
+        "Using shared contacts to relay pressure, monitor someone, or bypass boundaries.",
       ],
     ],
   },
@@ -572,11 +572,11 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Attacking your identity",
-        "A pattern of attacking your identity that can undermine trust, autonomy, or emotional safety.",
+        "Targeting someone’s confidence, identity, or vulnerabilities to make them easier to control.",
       ],
       [
         "Chronic criticism",
-        "A pattern of chronic criticism that can undermine trust, autonomy, or emotional safety.",
+        "Persistently finding fault in ways that erode confidence and make approval feel unattainable.",
       ],
       [
         "Competence undermining",
@@ -588,7 +588,7 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Eroding self-trust",
-        "A pattern of eroding self-trust that can undermine trust, autonomy, or emotional safety.",
+        "Repeatedly causing someone to doubt their judgment, feelings, or ability to make decisions.",
       ],
       [
         "Goal sabotage",
@@ -600,7 +600,7 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Making you prove your worth",
-        "A pattern of making you prove your worth that can undermine trust, autonomy, or emotional safety.",
+        "Keeping acceptance or affection conditional on continual demonstrations of value.",
       ],
       [
         "Negging",
@@ -612,19 +612,19 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Weaponizing diagnoses or therapy language",
-        "A pattern of weaponizing diagnoses or therapy language that can undermine trust, autonomy, or emotional safety.",
+        "Targeting someone’s confidence, identity, or vulnerabilities to make them easier to control.",
       ],
       [
         "Weaponizing insecurities",
-        "A pattern of weaponizing insecurities that can undermine trust, autonomy, or emotional safety.",
+        "Targeting someone’s confidence, identity, or vulnerabilities to make them easier to control.",
       ],
       [
         "Weaponizing past trauma",
-        "A pattern of weaponizing past trauma that can undermine trust, autonomy, or emotional safety.",
+        "Targeting someone’s confidence, identity, or vulnerabilities to make them easier to control.",
       ],
       [
         "Weaponizing secrets",
-        "A pattern of weaponizing secrets that can undermine trust, autonomy, or emotional safety.",
+        "Using private information to shame, threaten, or control someone.",
       ],
     ],
   },
@@ -633,71 +633,71 @@ const categorySources: RedFlagCategorySource[] = [
     flags: [
       [
         "Contacting you repeatedly after you've asked them to stop",
-        "A pattern of contacting you repeatedly after you've asked them to stop that can undermine trust, autonomy, or emotional safety.",
+        "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
       ],
       [
         "Deliberately creating “exceptions”",
-        "A pattern of deliberately creating “exceptions” that can undermine trust, autonomy, or emotional safety.",
+        "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
       ],
       [
         "Digital stalking",
-        "A pattern of digital stalking that can undermine trust, autonomy, or emotional safety.",
+        "Using online accounts, devices, or digital activity to monitor someone without consent.",
       ],
       [
         "Ignoring “no”",
-        "A pattern of ignoring “no” that can undermine trust, autonomy, or emotional safety.",
+        "Continuing to pressure or act after a clear refusal or lack of consent.",
       ],
       [
         "Mocking boundaries",
-        "A pattern of mocking boundaries that can undermine trust, autonomy, or emotional safety.",
+        "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
       ],
       [
         "Privacy invasion",
-        "A pattern of privacy invasion that can undermine trust, autonomy, or emotional safety.",
+        "Accessing personal space, information, or communications without permission.",
       ],
       [
         "Punishing boundaries",
-        "A pattern of punishing boundaries that can undermine trust, autonomy, or emotional safety.",
+        "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
       ],
       [
         "Reading private messages",
-        "A pattern of reading private messages that can undermine trust, autonomy, or emotional safety.",
+        "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
       ],
       [
         "Refusing to leave",
-        "A pattern of refusing to leave that can undermine trust, autonomy, or emotional safety.",
+        "Remaining in someone’s space after being asked to leave in order to intimidate or control.",
       ],
       [
         "Repeatedly renegotiating a boundary after you've clearly answered.",
-        "A pattern of repeatedly renegotiating a boundary after you've clearly answered that can undermine trust, autonomy, or emotional safety.",
+        "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
       ],
       [
         "Sexual boundary violations",
-        "A pattern of sexual boundary violations that can undermine trust, autonomy, or emotional safety.",
+        "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
       ],
       [
         "Sharing private information without permission",
-        "A pattern of sharing private information without permission that can undermine trust, autonomy, or emotional safety.",
+        "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
       ],
       [
         "Showing up uninvited",
-        "A pattern of showing up uninvited that can undermine trust, autonomy, or emotional safety.",
+        "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
       ],
       [
         "Stalking",
-        "A pattern of stalking that can undermine trust, autonomy, or emotional safety.",
+        "Repeated unwanted monitoring, contact, or presence that causes fear or disrupts daily life.",
       ],
       [
         "Testing boundaries",
-        "A pattern of testing boundaries that can undermine trust, autonomy, or emotional safety.",
+        "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
       ],
       [
         "Treating boundaries as rejection",
-        "A pattern of treating boundaries as rejection that can undermine trust, autonomy, or emotional safety.",
+        "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
       ],
       [
         "Unwanted physical contact",
-        "A pattern of unwanted physical contact that can undermine trust, autonomy, or emotional safety.",
+        "Touching someone without consent or after they have indicated they do not want it.",
       ],
     ],
   },
@@ -706,7 +706,7 @@ const categorySources: RedFlagCategorySource[] = [
     flags: [
       [
         "Apology without behavioral change",
-        "A pattern of apology without behavioral change that can undermine trust, autonomy, or emotional safety.",
+        "Avoiding responsibility for harm through denial, delay, double standards, or empty gestures.",
       ],
       [
         "Avoiding meaningful support",
@@ -715,19 +715,19 @@ const categorySources: RedFlagCategorySource[] = [
       ["Conditional apologies", "“I'm sorry, but you…”"],
       [
         "Demanding immediate forgiveness",
-        "A pattern of demanding immediate forgiveness that can undermine trust, autonomy, or emotional safety.",
+        "Avoiding responsibility for harm through denial, delay, double standards, or empty gestures.",
       ],
       [
         "Excuse-making",
-        "A pattern of excuse-making that can undermine trust, autonomy, or emotional safety.",
+        "Offering justifications that minimize harm instead of taking responsibility for it.",
       ],
       [
         "Externalizing blame",
-        "A pattern of externalizing blame that can undermine trust, autonomy, or emotional safety.",
+        "Attributing harmful choices to other people, circumstances, or forces outside oneself.",
       ],
       [
         "Keeping different rules for themselves and you",
-        "A pattern of keeping different rules for themselves and you that can undermine trust, autonomy, or emotional safety.",
+        "Avoiding responsibility for harm through denial, delay, double standards, or empty gestures.",
       ],
       [
         "Lack of self-reflection",
@@ -735,32 +735,32 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Never apologizing",
-        "A pattern of never apologizing that can undermine trust, autonomy, or emotional safety.",
+        "Refusing to acknowledge harm or offer a genuine apology when one is warranted.",
       ],
       ["Non-apologies", "“I'm sorry you feel that way.”"],
       [
         "Performative remorse",
-        "A pattern of performative remorse that can undermine trust, autonomy, or emotional safety.",
+        "Displaying regret for appearance or to regain access without meaningful accountability.",
       ],
       [
         "Refusing repair",
-        "A pattern of refusing repair that can undermine trust, autonomy, or emotional safety.",
+        "Declining to address harm, rebuild trust, or take steps to make amends.",
       ],
       [
         "Repeated promises to change followed by recurrence",
-        "A pattern of repeated promises to change followed by recurrence that can undermine trust, autonomy, or emotional safety.",
+        "Avoiding responsibility for harm through denial, delay, double standards, or empty gestures.",
       ],
       [
         "Retaliating when confronted",
-        "A pattern of retaliating when confronted that can undermine trust, autonomy, or emotional safety.",
+        "Responding to concerns with punishment, anger, or counterattacks instead of engagement.",
       ],
       [
         "Treating consequences as persecution",
-        "A pattern of treating consequences as persecution that can undermine trust, autonomy, or emotional safety.",
+        "Avoiding responsibility for harm through denial, delay, double standards, or empty gestures.",
       ],
       [
         "Using an apology to end discussion",
-        "A pattern of using an apology to end discussion that can undermine trust, autonomy, or emotional safety.",
+        "Avoiding responsibility for harm through denial, delay, double standards, or empty gestures.",
       ],
     ],
   },
@@ -769,19 +769,19 @@ const categorySources: RedFlagCategorySource[] = [
     flags: [
       [
         "Breakup threats",
-        "A pattern of breakup threats that can undermine trust, autonomy, or emotional safety.",
+        "Threatening to end the relationship to force compliance or silence concerns.",
       ],
       [
         "Chaos creation",
-        "A pattern of chaos creation that can undermine trust, autonomy, or emotional safety.",
+        "Creating confusion, conflict, or instability that keeps others off balance.",
       ],
       [
         "Constant crisis mode",
-        "A pattern of constant crisis mode that can undermine trust, autonomy, or emotional safety.",
+        "Keeping the relationship in a recurring state of emergency that consumes attention and resources.",
       ],
       [
         "Creating problems and then becoming the rescuer",
-        "A pattern of creating problems and then becoming the rescuer that can undermine trust, autonomy, or emotional safety.",
+        "Creating recurring uncertainty, conflict, or crises that keep the relationship off balance.",
       ],
       [
         "Crisis bonding",
@@ -789,15 +789,15 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Demanding demonstrations of devotion",
-        "A pattern of demanding demonstrations of devotion that can undermine trust, autonomy, or emotional safety.",
+        "Creating recurring uncertainty, conflict, or crises that keep the relationship off balance.",
       ],
       [
         "Manufactured crises",
-        "A pattern of manufactured crises that can undermine trust, autonomy, or emotional safety.",
+        "Inventing or escalating emergencies to gain attention, control, or compliance.",
       ],
       [
         "Picking fights before important events",
-        "A pattern of picking fights before important events that can undermine trust, autonomy, or emotional safety.",
+        "Creating recurring uncertainty, conflict, or crises that keep the relationship off balance.",
       ],
       [
         "Recurring harmful relationship patterns",
@@ -805,27 +805,27 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Repeated breakups and reunions",
-        "A pattern of repeated breakups and reunions that can undermine trust, autonomy, or emotional safety.",
+        "Creating recurring uncertainty, conflict, or crises that keep the relationship off balance.",
       ],
       [
         "Sabotaging birthdays, holidays, work events, etc.",
-        "A pattern of sabotaging birthdays, holidays, work events, etc that can undermine trust, autonomy, or emotional safety.",
+        "Creating recurring uncertainty, conflict, or crises that keep the relationship off balance.",
       ],
       [
         "Sleep deprivation through conflict",
-        "A pattern of sleep deprivation through conflict that can undermine trust, autonomy, or emotional safety.",
+        "Creating recurring uncertainty, conflict, or crises that keep the relationship off balance.",
       ],
       [
         "Testing your loyalty",
-        "A pattern of testing your loyalty that can undermine trust, autonomy, or emotional safety.",
+        "Creating recurring uncertainty, conflict, or crises that keep the relationship off balance.",
       ],
       [
         "Unpredictable punishment",
-        "A pattern of unpredictable punishment that can undermine trust, autonomy, or emotional safety.",
+        "Responding to ordinary behavior with inconsistent penalties that keep others anxious and guessing.",
       ],
       [
         "Walking-on-eggshells dynamics",
-        "A pattern of walking-on-eggshells dynamics that can undermine trust, autonomy, or emotional safety.",
+        "Creating an atmosphere where someone constantly monitors themselves to avoid an outburst or punishment.",
       ],
     ],
   },
@@ -834,27 +834,27 @@ const categorySources: RedFlagCategorySource[] = [
     flags: [
       [
         "Account monitoring",
-        "A pattern of account monitoring that can undermine trust, autonomy, or emotional safety.",
+        "Reviewing someone’s online accounts or activity to track or control them.",
       ],
       [
         "Checking screen time/activity",
-        "A pattern of checking screen time/activity that can undermine trust, autonomy, or emotional safety.",
+        "Using technology or online access to monitor, pressure, impersonate, or control someone.",
       ],
       [
         "Controlling what you post",
-        "A pattern of controlling what you post that can undermine trust, autonomy, or emotional safety.",
+        "Using technology or online access to monitor, pressure, impersonate, or control someone.",
       ],
       [
         "Cyberstalking",
-        "A pattern of cyberstalking that can undermine trust, autonomy, or emotional safety.",
+        "Using digital tools or platforms to repeatedly monitor, contact, or harass someone.",
       ],
       [
         "Demanding immediate text responses",
-        "A pattern of demanding immediate text responses that can undermine trust, autonomy, or emotional safety.",
+        "Using technology or online access to monitor, pressure, impersonate, or control someone.",
       ],
       [
         "Demanding passwords",
-        "A pattern of demanding passwords that can undermine trust, autonomy, or emotional safety.",
+        "Using technology or online access to monitor, pressure, impersonate, or control someone.",
       ],
       [
         "Digital isolation",
@@ -862,7 +862,7 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Excessive calling/texting",
-        "A pattern of excessive calling/texting that can undermine trust, autonomy, or emotional safety.",
+        "Using technology or online access to monitor, pressure, impersonate, or control someone.",
       ],
       [
         "Image-based abuse",
@@ -870,31 +870,31 @@ const categorySources: RedFlagCategorySource[] = [
       ],
       [
         "Impersonation",
-        "A pattern of impersonation that can undermine trust, autonomy, or emotional safety.",
+        "Pretending to be someone else online to deceive, monitor, or damage them.",
       ],
       [
         "Location surveillance",
-        "A pattern of location surveillance that can undermine trust, autonomy, or emotional safety.",
+        "Using devices, apps, or accounts to track someone’s whereabouts without consent.",
       ],
       [
         "Reading DMs",
-        "A pattern of reading dms that can undermine trust, autonomy, or emotional safety.",
+        "Using technology or online access to monitor, pressure, impersonate, or control someone.",
       ],
       [
         "Technology-facilitated coercive control",
-        "A pattern of technology-facilitated coercive control that can undermine trust, autonomy, or emotional safety.",
+        "Using technology or online access to monitor, pressure, impersonate, or control someone.",
       ],
       [
         "Tracking devices",
-        "A pattern of tracking devices that can undermine trust, autonomy, or emotional safety.",
+        "Placing or using technology to follow someone’s movements without their knowledge or agreement.",
       ],
       [
         "Unauthorized account access",
-        "A pattern of unauthorized account access that can undermine trust, autonomy, or emotional safety.",
+        "Entering someone’s digital accounts without permission.",
       ],
       [
         "Using read receipts as surveillance",
-        "A pattern of using read receipts as surveillance that can undermine trust, autonomy, or emotional safety.",
+        "Using technology or online access to monitor, pressure, impersonate, or control someone.",
       ],
     ],
   },
