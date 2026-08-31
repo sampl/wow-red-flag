@@ -128,6 +128,10 @@ const categorySources: RedFlagCategorySource[] = [
         "Lying by omission",
         "Withholding material information so that someone reaches a false conclusion.",
       ],
+      [
+        "Maintaining a secret committed relationship",
+        "Concealing another committed relationship or presenting an agreed-upon monogamous relationship as exclusive when it is not.",
+      ],
       ["Minimization", "“It wasn't that bad.”"],
       [
         "Plausible deniability",
@@ -378,6 +382,10 @@ const categorySources: RedFlagCategorySource[] = [
         "Controlling access to essentials such as money, housing, transportation, or information.",
       ],
       [
+        "Household labor inequality",
+        "Consistently expecting one partner to carry an unfair share of domestic work, care work, or planning.",
+      ],
+      [
         "Jealousy framed as protection",
         "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
@@ -564,7 +572,7 @@ const categorySources: RedFlagCategorySource[] = [
     ],
   },
   {
-    title: "Undermining confidence and identity",
+    title: "Undermining your confidence",
     flags: [
       [
         "Approval withholding",
@@ -652,6 +660,10 @@ const categorySources: RedFlagCategorySource[] = [
         "Disregarding clearly expressed limits, privacy, or consent to assert access or control.",
       ],
       [
+        "Non-consensual intimate recordings",
+        "Photographing or recording someone in a vulnerable or intimate situation without their consent or after they have refused.",
+      ],
+      [
         "Privacy invasion",
         "Accessing personal space, information, or communications without permission.",
       ],
@@ -702,7 +714,40 @@ const categorySources: RedFlagCategorySource[] = [
     ],
   },
   {
-    title: "Accountability problems",
+    title: "Physical safety and freedom",
+    flags: [
+      [
+        "Harming or threatening to harm children, pets, or loved ones",
+        "Using harm or threats against people or animals you care about to frighten, punish, or control you.",
+      ],
+      [
+        "Physical violence",
+        "Hitting, slapping, shoving, kicking, choking, restraining, or otherwise physically assaulting someone.",
+      ],
+      [
+        "Preventing emergency, medical, or legal help",
+        "Stopping someone from contacting emergency services, getting necessary care, reporting abuse, or seeking legal protection.",
+      ],
+      [
+        "Pressuring or forcing drug or alcohol use",
+        "Using pressure, coercion, or force to make someone consume drugs or alcohol, especially to lower their ability to choose or leave.",
+      ],
+      [
+        "Reckless or dangerous driving",
+        "Driving dangerously, threatening to crash, abandoning someone in an unsafe place, or using a vehicle to frighten or control them.",
+      ],
+      [
+        "Trapping or preventing you from leaving",
+        "Blocking exits, taking keys or transportation, locking someone in, or otherwise stopping them from leaving freely.",
+      ],
+      [
+        "Weapon intimidation or use",
+        "Displaying, threatening with, or using a weapon to frighten, harm, or control someone.",
+      ],
+    ],
+  },
+  {
+    title: "Accountability",
     flags: [
       [
         "Apology without behavioral change",
@@ -830,7 +875,7 @@ const categorySources: RedFlagCategorySource[] = [
     ],
   },
   {
-    title: "Digital forms",
+    title: "Digital red flags",
     flags: [
       [
         "Account monitoring",
