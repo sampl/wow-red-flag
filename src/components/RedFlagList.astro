@@ -1,0 +1,20 @@
+---
+import { redFlagCategories } from "../data/redFlags";
+import RedFlag from "./RedFlag.astro";
+---
+
+{
+  redFlagCategories.map((category) => (
+    <section
+      class="red-flag-category"
+      aria-labelledby={`category-${category.title.toLowerCase().replaceAll(" ", "-")}`}
+    >
+      <h2 id={`category-${category.title.toLowerCase().replaceAll(" ", "-")}`}>
+        {category.title}
+      </h2>
+      {category.flags.map((flag) => (
+        <RedFlag {...flag} />
+      ))}
+    </section>
+  ))
+}

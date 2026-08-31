@@ -119,17 +119,10 @@ li {
   margin: 0;
 }
 .red-flag {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
   padding: 1.25rem 0;
 }
-.emoji {
-  display: grid;
-  width: 3.2rem;
-  height: 3.2rem;
-  place-items: center;
-  font-size: 1.75rem;
+.red-flag-category h2 {
+  margin-bottom: 0;
 }
 .site-footer {
   margin-top: 6rem;

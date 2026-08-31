@@ -14,7 +14,7 @@ Original site content is licensed under [Creative Commons Attribution-ShareAlike
 
 ### Private alpha
 
-- Expand the list of red flags and add carefully sourced resources
+- For each red flag, add external links, a citation/source, an example, and an example of a healthy version of the behavior.
 
 ### Public beta
 
