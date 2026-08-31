@@ -1,5 +1,6 @@
 ---
 import { redFlagCategories } from "../data/redFlags";
+import GiphyEmbed from "../components/GiphyEmbed.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const categoryIds = Object.fromEntries(
@@ -8,6 +9,96 @@ const categoryIds = Object.fromEntries(
     `category-${category.title.toLowerCase().replaceAll(" ", "-")}`,
   ]),
 );
+
+const categoryGifs = [
+  {
+    embedUrl: "https://giphy.com/embed/9VnK2SUebgetTc9X7B",
+    title: "Looney Tunes cartoon",
+    paddingBottom: "75%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/RrIz6d8Xyu9BqOnayr",
+    title: "Tyler Reddick racing GIF",
+    paddingBottom: "56%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/dmwzK27KGMtHvLFRdi",
+    title: "Red flags GIF",
+    paddingBottom: "100%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/9DAJde1hRtOYgrdeTU",
+    title: "The Traitors GIF",
+    paddingBottom: "100%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/k4vs3VGJvdAqjdEHts",
+    title: "Red flag GIF",
+    paddingBottom: "100%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/11JoiIqzlbUeE8",
+    title: "Saturday Night Live GIF",
+    paddingBottom: "75%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/o56w7t0eIV8li",
+    title: "Britney Spears pizza GIF",
+    paddingBottom: "56%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/BPTJJphmYwwhrpiX2W",
+    title: "The Simpsons danger GIF",
+    paddingBottom: "57%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/3o7ZetIsjtbkgNE1I4",
+    title: "Run away fast GIF",
+    paddingBottom: "66%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/3o6j8KqIw0Lgmt2Fsk",
+    title: "BoJack Horseman rose-colored glasses GIF",
+    paddingBottom: "60%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/1n4iuWZFnTeN6qvdpD",
+    title: "This is fine GIF",
+    paddingBottom: "68%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/q6sJQQf6brCefj0l1D",
+    title: "Referee GIF",
+    paddingBottom: "86%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/5pMGZHSqfvGT5mnTwx",
+    title: "Judge GIF",
+    paddingBottom: "100%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/8YEeD1WB5FeyAiONoe",
+    title: "Schitt's Creek GIF",
+    paddingBottom: "100%",
+  },
+];
+
+const gifRotations = [
+  "-1.2deg",
+  "0.8deg",
+  "-0.6deg",
+  "1.1deg",
+  "-0.9deg",
+  "0.5deg",
+  "-1deg",
+  "0.7deg",
+  "-0.4deg",
+  "1deg",
+  "-0.7deg",
+  "0.6deg",
+  "-1.1deg",
+  "0.4deg",
+];
 ---
 
 <BaseLayout
@@ -60,24 +151,41 @@ const categoryIds = Object.fromEntries(
     </nav>
 
     {
-      redFlagCategories.map((category) => (
-        <section
-          class="red-flag-category"
-          aria-labelledby={categoryIds[category.title]}
-        >
-          <h2 id={categoryIds[category.title]}>{category.title}</h2>
-          <ul>
-            {category.flags.map((flag) => (
-              <li class="red-flag" id={flag.id}>
-                <strong>
-                  <a href={`#${flag.id}`}>{flag.title}</a>
-                </strong>{" "}
-                — {flag.description}
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))
+      redFlagCategories.map((category, index) => {
+        const gif = categoryGifs[index % categoryGifs.length];
+        const rotation = gifRotations[index % gifRotations.length];
+
+        return (
+          <div class="category-with-gif">
+          <section
+            class="red-flag-category"
+            aria-labelledby={categoryIds[category.title]}
+          >
+            <h2 id={categoryIds[category.title]}>{category.title}</h2>
+            <ul>
+              {category.flags.map((flag) => (
+                <li class="red-flag" id={flag.id}>
+                  <strong>
+                    <a href={`#${flag.id}`}>{flag.title}</a>
+                  </strong>{" "}
+                  — {flag.description}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <figure
+            class:list={[
+              "category-gif",
+              index % 2 === 0 ? "category-gif--left" : "category-gif--right",
+            ]}
+            style={`--gif-rotation: ${rotation}`}
+          >
+            <GiphyEmbed {...gif} />
+          </figure>
+          </div>
+        );
+      })
     }
 
     <hr />

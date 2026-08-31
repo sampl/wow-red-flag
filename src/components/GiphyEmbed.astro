@@ -1,0 +1,31 @@
+---
+const { embedUrl, paddingBottom = "75%", title } = Astro.props;
+---
+
+<div
+  class="giphy-embed-frame"
+  style={`--giphy-padding-bottom: ${paddingBottom}`}
+>
+  <iframe
+    src={embedUrl}
+    title={title}
+    width="100%"
+    height="100%"
+    class="giphy-embed"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<style>
+  .giphy-embed-frame {
+    position: relative;
+    height: 0;
+    padding-bottom: var(--giphy-padding-bottom);
+  }
+
+  iframe {
+    position: absolute;
+    inset: 0;
+    border: 0;
+  }
+</style>

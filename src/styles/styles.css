@@ -142,6 +142,14 @@ li {
 .red-flag-category h2 {
   margin-bottom: 0;
 }
+.category-with-gif {
+  position: relative;
+}
+.category-gif {
+  width: min(100%, 18rem);
+  margin: 2.75rem auto;
+  transform: rotate(var(--gif-rotation));
+}
 .red-flag-category ul {
   padding-inline-start: 1.15rem;
 }
@@ -227,6 +235,21 @@ button:hover {
 .basement a:hover,
 .basement a:focus-visible {
   text-decoration: underline;
+}
+@media (min-width: 70rem) {
+  .category-gif {
+    position: absolute;
+    top: 50%;
+    width: 10rem;
+    margin: 0;
+    transform: translateY(-50%) rotate(var(--gif-rotation));
+  }
+  .category-gif--left {
+    right: calc(100% + 3rem);
+  }
+  .category-gif--right {
+    left: calc(100% + 3rem);
+  }
 }
 @media (max-width: 34rem) {
   .site-main {
