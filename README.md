@@ -1,10 +1,13 @@
+<!-- markdownlint-disable-file MD025 -->
 <!-- markdownlint-disable-file MD026 -->
 
-# 🚩 "Wow, red flag..."
+# 🚩
+
+# "Wow, red flag..."
 
 A list of patterns found in difficult relationships.
 
-Live at [wowredflag.com](wowredflag.com)
+Live at **[wowredflag.com](wowredflag.com) ➡️**
 
 ## Documentation
 
