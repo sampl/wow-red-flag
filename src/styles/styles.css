@@ -31,7 +31,7 @@ body {
 .page-wrapper {
   max-width: 46rem;
   margin: 0 auto;
-  padding: clamp(1.5rem, 5vw, 4rem);
+  padding: clamp(1rem, 5vw, 4rem);
 }
 a {
   color: var(--color-link);
@@ -74,9 +74,29 @@ h1 {
   font-weight: 500;
 }
 h2 {
-  margin-top: 2.75rem;
+  margin: 5.5rem 0 2rem;
   font-size: clamp(1.35rem, 3vw, 1.6rem);
   font-weight: 500;
+}
+h2[id] {
+  position: relative;
+}
+.heading-anchor {
+  position: absolute;
+  top: 0;
+  right: calc(100% + 0.4rem);
+  padding-block: 0.35em;
+  color: var(--color-text-tertiary);
+  font-size: 0.7em;
+  font-weight: 400;
+  line-height: 1;
+  opacity: 0.65;
+  text-decoration: none;
+}
+.heading-anchor:hover,
+.heading-anchor:focus-visible {
+  color: var(--color-link);
+  opacity: 1;
 }
 h3 {
   margin: 0 0 0.3rem;
@@ -140,22 +160,24 @@ li {
   text-decoration: underline;
 }
 .red-flag-category h2 {
-  margin-bottom: 0;
-}
-.category-with-gif {
-  position: relative;
+  margin-bottom: 2rem;
 }
 .category-gif {
   width: min(100%, 18rem);
-  margin: 2.75rem auto;
+  margin: 4rem auto;
   transform: rotate(var(--gif-rotation));
 }
-.red-flag-category ul {
-  padding-inline-start: 1.15rem;
+.category-gif .giphy-embed-frame {
+  overflow: hidden;
+  border-radius: 0.35rem;
+  box-shadow:
+    0 1px 2px rgb(74 36 31 / 10%),
+    0 5px 10px rgb(74 36 31 / 12%),
+    0 18px 32px rgb(74 36 31 / 16%);
 }
-.red-flag::marker {
-  content: "·  ";
-  font-size: 0.8em;
+.red-flag-category ul {
+  padding: 0;
+  list-style: none;
 }
 .table-of-contents {
   margin: 2rem 0;
@@ -239,22 +261,10 @@ button:hover {
 .basement a:focus-visible {
   text-decoration: underline;
 }
-@media (min-width: 70rem) {
-  .category-gif {
-    position: absolute;
-    top: 50%;
-    width: 10rem;
-    margin: 0;
-    transform: translateY(-50%) rotate(var(--gif-rotation));
-  }
-  .category-gif--left {
-    right: calc(100% + 3rem);
-  }
-  .category-gif--right {
-    left: calc(100% + 3rem);
-  }
-}
 @media (max-width: 34rem) {
+  .heading-anchor {
+    right: calc(100% + 0.15rem);
+  }
   .site-main {
     padding-top: 4.5rem;
   }

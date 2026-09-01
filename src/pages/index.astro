@@ -163,32 +163,35 @@ const gifRotations = [
 
         return (
           <div class="category-with-gif">
-          <section
-            class="red-flag-category"
-            aria-labelledby={categoryIds[category.title]}
-          >
-            <h2 id={categoryIds[category.title]}>{category.title}</h2>
-            <ul>
-              {category.flags.map((flag) => (
-                <li class="red-flag" id={flag.id}>
-                  <strong>
-                    <a href={`#${flag.id}`}>{flag.title}</a>
-                  </strong>{" "}
-                  — {flag.description}
-                </li>
-              ))}
-            </ul>
-          </section>
+            <section
+              class="red-flag-category"
+              aria-labelledby={categoryIds[category.title]}
+            >
+              <h2 id={categoryIds[category.title]}>
+                <a
+                  class="heading-anchor"
+                  href={`#${categoryIds[category.title]}`}
+                  aria-label={`Link to ${category.title}`}
+                >
+                  #
+                </a>
+                {category.title}
+              </h2>
+              <ul>
+                {category.flags.map((flag) => (
+                  <li class="red-flag" id={flag.id}>
+                    <strong>
+                      <a href={`#${flag.id}`}>{flag.title}</a>
+                    </strong>{" "}
+                    — {flag.description}
+                  </li>
+                ))}
+              </ul>
+            </section>
 
-          <figure
-            class:list={[
-              "category-gif",
-              index % 2 === 0 ? "category-gif--left" : "category-gif--right",
-            ]}
-            style={`--gif-rotation: ${rotation}`}
-          >
-            <GiphyEmbed {...gif} />
-          </figure>
+            <figure class="category-gif" style={`--gif-rotation: ${rotation}`}>
+              <GiphyEmbed {...gif} />
+            </figure>
           </div>
         );
       })
@@ -197,7 +200,14 @@ const gifRotations = [
     <hr />
 
     <section aria-labelledby="resources">
-      <h2 id="resources">More resources</h2>
+      <h2 id="resources">
+        <a
+          class="heading-anchor"
+          href="#resources"
+          aria-label="Link to More resources">#</a
+        >
+        More resources
+      </h2>
       <ul>
         <li>
           <a href="https://www.highconflictinstitute.com/podcast/"

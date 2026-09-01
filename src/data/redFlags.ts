@@ -175,10 +175,7 @@ const categorySources: RedFlagCategorySource[] = [
         "Breadcrumbing",
         "Giving just enough attention or hope to keep someone invested.",
       ],
-      [
-        "Conditional love",
-        "Communicating that affection depends upon compliance.",
-      ],
+      ["Conditional love", "When affection depends upon your compliance."],
       [
         "Forced intimacy",
         "Pushing emotional, sexual, financial, or practical closeness faster than you want.",
@@ -298,15 +295,11 @@ const categorySources: RedFlagCategorySource[] = [
     title: "Control and coercion",
     flags: [
       [
-        "Coercive control",
-        "An ongoing pattern of restrictions, intimidation, and dependency that erodes another person’s autonomy.",
-      ],
-      [
         "Controlling access to money",
         "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
-        "Controlling clothing or appearance",
+        "Controlling clothing/appearance",
         "Restricting everyday choices, access, or freedom in ways that increase dependence and reduce autonomy.",
       ],
       [
@@ -437,7 +430,7 @@ const categorySources: RedFlagCategorySource[] = [
     title: "Jealousy & possessiveness",
     flags: [
       [
-        "Accusations of cheating without reasonable basis",
+        "Baseless cheating accusations",
         "Treating ordinary independence or social contact as evidence of disloyalty in order to justify control.",
       ],
       [
@@ -665,7 +658,7 @@ const categorySources: RedFlagCategorySource[] = [
     title: "Physical safety",
     flags: [
       [
-        "Harming or threatening to harm children, pets, or loved ones",
+        "Harming or threatening children, pets, or loved ones",
         "Using harm or threats against people or animals you care about to frighten, punish, or control you.",
       ],
       [
@@ -673,23 +666,23 @@ const categorySources: RedFlagCategorySource[] = [
         "Hitting, slapping, shoving, kicking, choking, restraining, or otherwise physically assaulting someone.",
       ],
       [
-        "Preventing emergency, medical, or legal help",
+        "Preventing you from getting help",
         "Stopping someone from contacting emergency services, getting necessary care, reporting abuse, or seeking legal protection.",
       ],
       [
-        "Pressuring or forcing drug or alcohol use",
+        "Pressuring with drugs or alcohol",
         "Using pressure, coercion, or force to make someone consume drugs or alcohol, especially to lower their ability to choose or leave.",
       ],
       [
-        "Reckless or dangerous driving",
-        "Driving dangerously, threatening to crash, abandoning someone in an unsafe place, or using a vehicle to frighten or control them.",
+        "Dangerous driving",
+        "Driving recklessly, threatening to crash, abandoning someone in an unsafe place, or using a vehicle to frighten or control them.",
       ],
       [
-        "Trapping or preventing you from leaving",
+        "Preventing you from leaving",
         "Blocking exits, taking keys or transportation, locking someone in, or otherwise stopping them from leaving freely.",
       ],
       [
-        "Weapon intimidation or use",
+        "Weapons",
         "Displaying, threatening with, or using a weapon to frighten, harm, or control someone.",
       ],
     ],
@@ -795,7 +788,7 @@ const categorySources: RedFlagCategorySource[] = [
         "Responding to ordinary behavior with inconsistent penalties that keep others anxious and guessing.",
       ],
       [
-        "Walking-on-eggshells dynamics",
+        "Walking-on-eggshells",
         "Creating an atmosphere where someone constantly monitors themselves to avoid an outburst or punishment.",
       ],
     ],
