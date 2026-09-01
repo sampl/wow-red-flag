@@ -107,17 +107,23 @@ const gifRotations = [
 >
   <article class="content-card">
     <header class="intro">
-      <img
+      <video
         class="logo"
-        src="/icon.png"
-        width="160"
-        height="160"
-        alt="A red flag"
-      />
+        width="400"
+        height="270"
+        autoplay
+        muted
+        loop
+        playsinline
+        aria-hidden="true"
+      >
+        <source src="/red-flag.webm" type="video/webm" />
+        <img src="/icon.png" width="160" height="160" alt="" />
+      </video>
       <h1>“Wow, red flag…”</h1>
     </header>
 
-    <p>
+    <p class="subheading">
       A list of behaviors and personality attributes commonly associated with
       toxic relationships.
     </p>

@@ -57,9 +57,9 @@ input:focus-visible {
   text-align: left;
 }
 .logo {
-  width: 7.25rem;
-  height: 7.25rem;
-  margin: -5.25rem 0 1rem;
+  width: min(100%, 11rem);
+  height: auto;
+  margin: -2.8rem 0 1rem;
   display: block;
 }
 h1,
@@ -70,7 +70,7 @@ h3 {
 }
 h1 {
   margin: 0 0 1.5rem;
-  font-size: clamp(2.25rem, 6vw, 3.75rem);
+  font-size: clamp(2rem, 5vw, 3.25rem);
   font-weight: 500;
 }
 h2 {
@@ -94,7 +94,7 @@ p {
   margin: 0 0 1rem;
 }
 .subheading {
-  margin: 0 0 1.25rem;
+  margin: 0 0 2rem;
   font-size: 1.2rem;
 }
 hr {
@@ -205,6 +205,9 @@ input {
   border: 0;
   border-radius: 0.25rem;
   background: var(--color-input);
+}
+#email {
+  max-width: 28rem;
 }
 button {
   padding: 0.55rem 0.9rem;
