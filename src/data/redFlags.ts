@@ -691,7 +691,7 @@ const categorySources: RedFlagCategorySource[] = [
     title: "Accountability",
     flags: [
       [
-        "Avoiding meaningful support",
+        "Not getting help",
         "Repeatedly refusing appropriate support or help while ongoing harmful behavior remains unaddressed.",
       ],
       [
@@ -699,7 +699,7 @@ const categorySources: RedFlagCategorySource[] = [
         "Avoiding responsibility for harm through denial, delay, double standards, or empty gestures.",
       ],
       [
-        "Excuse-making",
+        "Making excuses",
         "Offering justifications that minimize harm instead of taking responsibility for it.",
       ],
       [
