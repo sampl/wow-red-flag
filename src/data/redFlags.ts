@@ -269,6 +269,10 @@ const categorySources: RedFlagCategorySource[] = [
         "Deliberately provoking a reaction and then criticizing the reaction.",
       ],
       [
+        "Passive aggression",
+        "Expressing hostility or resentment indirectly through sarcasm, avoidance, deliberate delays, or subtle sabotage instead of addressing it openly.",
+      ],
+      [
         "Prejudice and bigotry",
         "Expressing or acting on biased, hostile, demeaning, or discriminatory attitudes toward someone because of their race, gender, religion, sexuality, disability, nationality, or other identity.",
       ],
@@ -488,6 +492,10 @@ const categorySources: RedFlagCategorySource[] = [
       [
         "Attacking your identity",
         "Targeting someone’s confidence, identity, or vulnerabilities to make them easier to control.",
+      ],
+      [
+        "Backhanded compliments",
+        "Giving praise that contains a put-down, criticism, or insult meant to undermine confidence.",
       ],
       [
         "Chronic criticism",
