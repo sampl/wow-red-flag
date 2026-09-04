@@ -1,25 +1,18 @@
 ---
-import { redFlagCategories } from "../data/redFlags";
+import { redFlags, TAGS } from "../data/redFlags";
 import GiphyEmbed from "../components/GiphyEmbed.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const categoryIds = Object.fromEntries(
-  redFlagCategories.map((category) => [
-    category.title,
-    `category-${category.title.toLowerCase().replaceAll(" ", "-")}`,
-  ]),
-);
-
-const categoryGifs = [
-  {
-    embedUrl: "https://giphy.com/embed/9VnK2SUebgetTc9X7B",
-    title: "Looney Tunes cartoon",
-    paddingBottom: "75%",
-  },
+const interludeGifs = [
   {
     embedUrl: "https://giphy.com/embed/RrIz6d8Xyu9BqOnayr",
     title: "Tyler Reddick racing GIF",
     paddingBottom: "56%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/9VnK2SUebgetTc9X7B",
+    title: "Looney Tunes cartoon",
+    paddingBottom: "75%",
   },
   {
     embedUrl: "https://giphy.com/embed/dmwzK27KGMtHvLFRdi",
@@ -52,14 +45,14 @@ const categoryGifs = [
     paddingBottom: "57%",
   },
   {
+    embedUrl: "https://giphy.com/embed/Z9cRCMdAMzXi25dwhE",
+    title: "Bernie Sanders GIF",
+    paddingBottom: "58%",
+  },
+  {
     embedUrl: "https://giphy.com/embed/3o7ZetIsjtbkgNE1I4",
     title: "Run away fast GIF",
     paddingBottom: "66%",
-  },
-  {
-    embedUrl: "https://giphy.com/embed/3o6j8KqIw0Lgmt2Fsk",
-    title: "BoJack Horseman rose-colored glasses GIF",
-    paddingBottom: "60%",
   },
   {
     embedUrl: "https://giphy.com/embed/1n4iuWZFnTeN6qvdpD",
@@ -81,6 +74,21 @@ const categoryGifs = [
     title: "Schitt's Creek GIF",
     paddingBottom: "100%",
   },
+  {
+    embedUrl: "https://giphy.com/embed/cQtlhD48EG0SY",
+    title: "Fixing testosterone GIF",
+    paddingBottom: "95%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/NTur7XlVDUdqM",
+    title: "Consequences GIF",
+    paddingBottom: "56%",
+  },
+  {
+    embedUrl: "https://giphy.com/embed/3o6j8KqIw0Lgmt2Fsk",
+    title: "BoJack Horseman rose-colored glasses GIF",
+    paddingBottom: "60%",
+  },
 ];
 
 const gifRotations = [
@@ -98,7 +106,25 @@ const gifRotations = [
   "0.6deg",
   "-1.1deg",
   "0.4deg",
+  "-0.8deg",
+  "0.9deg",
+  "-0.5deg",
 ];
+
+// Split the flags into (interludeGifs.length + 1) segments as evenly as
+// possible, so leftover flags are spread across the gaps instead of all
+// landing after the last GIF. E.g. 11 flags over 2 GIFs -> [4, 4, 3], not
+// [5, 5, 1].
+const segmentCount = interludeGifs.length + 1;
+const baseSegmentSize = Math.floor(redFlags.length / segmentCount);
+const remainder = redFlags.length % segmentCount;
+
+const gifPositions = new Map();
+let cumulative = 0;
+for (let gifIndex = 0; gifIndex < interludeGifs.length; gifIndex++) {
+  cumulative += baseSegmentSize + (gifIndex < remainder ? 1 : 0);
+  gifPositions.set(cumulative, gifIndex);
+}
 ---
 
 <BaseLayout
@@ -107,97 +133,72 @@ const gifRotations = [
 >
   <article class="content-card">
     <header class="intro">
-      <video
-        class="logo"
-        width="400"
-        height="270"
-        autoplay
-        muted
-        loop
-        playsinline
-        aria-hidden="true"
-      >
-        <source src="/red-flag.webm" type="video/webm" />
-        <img src="/icon.png" width="160" height="160" alt="" />
-      </video>
+      <img class="logo" src="/icon.png" width="160" height="160" alt="A red flag" />
       <h1>“Wow, red flag…”</h1>
+      <p class="subheading">
+        Behaviors & personality attributes of toxic relationships
+      </p>
     </header>
 
-    <p class="subheading">
-      A list of behaviors and personality attributes commonly associated with
-      toxic relationships.
-    </p>
+    <div class="tag-filters" role="group" aria-label="Filter by tag">
+      {
+        TAGS.map((tag) => (
+          <button type="button" class="tag-pill" data-tag={tag.id} aria-pressed="false">
+            <span class="tag-pill-label">{tag.label}</span>
+            <span class="tag-pill-clear" aria-hidden="true">×</span>
+          </button>
+        ))
+      }
+    </div>
 
-    <p>
-      PLEASE NOTE: This site offers general educational information, NOT a
-      diagnosis or medical, mental-health, legal, or professional advice. Every
-      relationship and situation is different.
-    </p>
+    <ul class="red-flag-list">
+      {
+        redFlags.map((flag, index) => {
+          const gifIndex = gifPositions.get(index);
+          const gif =
+            gifIndex !== undefined ? interludeGifs[gifIndex] : undefined;
+          const rotation =
+            gifIndex !== undefined
+              ? gifRotations[gifIndex % gifRotations.length]
+              : undefined;
 
-    <aside class="safety-notice" aria-labelledby="safety-notice-title">
-      <h2 id="safety-notice-title">Are you or a loved one in danger?</h2>
+          return (
+            <>
+              {gif && (
+                <li class="gif-slot" data-gif aria-hidden="true">
+                  <figure
+                    class="interlude-gif"
+                    style={`--gif-rotation: ${rotation}`}
+                  >
+                    <GiphyEmbed {...gif} />
+                  </figure>
+                </li>
+              )}
+              <li class="red-flag" id={flag.id} data-tags={flag.tags.join(" ")}>
+                <strong>
+                  <a href={`#${flag.id}`}>{flag.title}</a>
+                </strong>{" "}
+                — {flag.description}
+              </li>
+            </>
+          );
+        })
+      }
+    </ul>
+
+    <aside class="safety-notice" aria-label="Are you or a loved one in danger?">
       <p>
-        Call your local emergency number. In the United States, you can also
-        contact the National Domestic Violence Hotline at <a
+        This site offers general educational information, not a diagnosis or
+        medical, mental-health, legal, or professional advice. Every
+        relationship and situation is different.
+      </p>
+      <p>
+        <strong>Are you or a loved one in danger?</strong> Call your local
+        emergency number, or the US National Domestic Violence Hotline at <a
           href="tel:8007997233">800-799-7233</a
         >.
       </p>
     </aside>
-
-    <nav class="table-of-contents" aria-label="Categories">
-      <ul>
-        {
-          redFlagCategories.map((category) => (
-            <li>
-              <a href={`#${categoryIds[category.title]}`}>{category.title}</a>
-            </li>
-          ))
-        }
-      </ul>
-    </nav>
-
-    {
-      redFlagCategories.map((category, index) => {
-        const gif = categoryGifs[index % categoryGifs.length];
-        const rotation = gifRotations[index % gifRotations.length];
-
-        return (
-          <div class="category-with-gif">
-            <section
-              class="red-flag-category"
-              aria-labelledby={categoryIds[category.title]}
-            >
-              <h2 id={categoryIds[category.title]}>
-                <a
-                  class="heading-anchor"
-                  href={`#${categoryIds[category.title]}`}
-                  aria-label={`Link to ${category.title}`}
-                >
-                  #
-                </a>
-                {category.title}
-              </h2>
-              <ul>
-                {category.flags.map((flag) => (
-                  <li class="red-flag" id={flag.id}>
-                    <strong>
-                      <a href={`#${flag.id}`}>{flag.title}</a>
-                    </strong>{" "}
-                    — {flag.description}
-                  </li>
-                ))}
-              </ul>
-            </section>
-
-            <figure class="category-gif" style={`--gif-rotation: ${rotation}`}>
-              <GiphyEmbed {...gif} />
-            </figure>
-          </div>
-        );
-      })
-    }
-
-    <hr />
 
     <section aria-labelledby="resources">
       <h2 id="resources">
@@ -228,10 +229,55 @@ const gifRotations = [
         </li>
         <li>
           <a href="https://www.hbo.com/the-vow"
-            >The Vow — HBO documentary series about NXIVM</a
+            >The Vow — HBO documentary series</a
           >
         </li>
       </ul>
     </section>
   </article>
 </BaseLayout>
+
+<script>
+  const pills = [...document.querySelectorAll(".tag-pill")].filter(
+    (el) => el instanceof HTMLElement,
+  );
+  const flags = [...document.querySelectorAll(".red-flag")].filter(
+    (el) => el instanceof HTMLElement,
+  );
+  const gifSlots = [...document.querySelectorAll(".gif-slot")].filter(
+    (el) => el instanceof HTMLElement,
+  );
+
+  let activeTag = null;
+
+  const applyFilter = () => {
+    if (!activeTag) {
+      flags.forEach((flag) => {
+        flag.hidden = false;
+      });
+      gifSlots.forEach((slot) => {
+        slot.hidden = false;
+      });
+      return;
+    }
+
+    gifSlots.forEach((slot) => {
+      slot.hidden = true;
+    });
+    flags.forEach((flag) => {
+      const tags = flag.dataset.tags?.split(" ") ?? [];
+      flag.hidden = !tags.includes(activeTag);
+    });
+  };
+
+  pills.forEach((pill) => {
+    pill.addEventListener("click", () => {
+      const tag = pill.dataset.tag ?? null;
+      activeTag = activeTag === tag ? null : tag;
+      pills.forEach((p) => {
+        p.setAttribute("aria-pressed", String(p.dataset.tag === activeTag));
+      });
+      applyFilter();
+    });
+  });
+</script>
