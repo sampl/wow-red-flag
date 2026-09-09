@@ -5,13 +5,27 @@ export type RedFlag = {
   title: string;
   description: string;
   tags: TagId[];
+  alternateNames: string[];
+  alternateNameLinks: RedFlagLink[];
+  seeAlso: RedFlagLink[];
+};
+
+export type RedFlagLink = {
+  id: string;
+  title: string;
 };
 
 type RedFlagEntry = readonly [
   title: string,
   description: string,
   tags: TagId[],
+  metadata?: RedFlagMetadata,
 ];
+
+type RedFlagMetadata = {
+  alternateNames?: string[];
+  seeAlso?: string[];
+};
 
 const redFlagEntries: RedFlagEntry[] = [
   [
@@ -28,6 +42,10 @@ const redFlagEntries: RedFlagEntry[] = [
     "Deflection",
     "Redirecting a discussion away from their behavior; whataboutism is a common form.",
     ["accountability"],
+    {
+      alternateNames: ["Whataboutism"],
+      seeAlso: ["shifting-blame", "darvo"],
+    },
   ],
   [
     "Double binds",
@@ -48,6 +66,10 @@ const redFlagEntries: RedFlagEntry[] = [
     "Feigning helplessness",
     "Weaponized incompetence: intentionally claiming or performing inability so responsibility shifts to another person.",
     ["accountability"],
+    {
+      alternateNames: ["Weaponized incompetence"],
+      seeAlso: ["household-labor-inequality", "shifting-blame"],
+    },
   ],
   [
     "Gaslighting",
@@ -93,6 +115,7 @@ const redFlagEntries: RedFlagEntry[] = [
     "Shifting blame",
     "Making their behavior your responsibility, or attributing harmful choices to other people, circumstances, or forces outside oneself.",
     ["accountability"],
+    { seeAlso: ["deflection", "projection"] },
   ],
   [
     "Threatening abandonment",
@@ -173,6 +196,10 @@ const redFlagEntries: RedFlagEntry[] = [
     "Straw-manning",
     "Putting words in your mouth: misrepresenting what someone said or believes so it is easier to dismiss or attack.",
     [],
+    {
+      alternateNames: ["Putting words in your mouth"],
+      seeAlso: ["bad-faith-interpretations", "semantic-arguments"],
+    },
   ],
   [
     "Revisionist history",
@@ -198,6 +225,7 @@ const redFlagEntries: RedFlagEntry[] = [
     "Boundary testing",
     "Making small violations to discover what you will tolerate.",
     ["boundaries"],
+    { seeAlso: ["deliberately-creating-exceptions", "mocking-boundaries"] },
   ],
   [
     "Breadcrumbing",
@@ -228,6 +256,10 @@ const redFlagEntries: RedFlagEntry[] = [
     "Hot-and-cold behavior",
     "Intermittent reinforcement: an unpredictable alternation between affection or reward and rejection or mistreatment.",
     [],
+    {
+      alternateNames: ["Intermittent reinforcement"],
+      seeAlso: ["breadcrumbing", "love-bombing", "on-again-off-again"],
+    },
   ],
   [
     "Idealization",
@@ -263,6 +295,10 @@ const redFlagEntries: RedFlagEntry[] = [
     "Belittling",
     "Belittling, mockery, or ridicule that makes someone feel small, incapable, or unworthy.",
     [],
+    {
+      alternateNames: ["Mockery"],
+      seeAlso: ["name-calling", "humiliation", "negging"],
+    },
   ],
   [
     "Contempt",
@@ -273,6 +309,7 @@ const redFlagEntries: RedFlagEntry[] = [
     "Damaging property",
     "Damaging belongings or surroundings, punching walls, or throwing objects to frighten, punish, or assert power.",
     ["violence"],
+    { seeAlso: ["intimidation", "threats"] },
   ],
   [
     "Sadistic pleasure",
@@ -283,6 +320,7 @@ const redFlagEntries: RedFlagEntry[] = [
     "Humiliation",
     "Causing shame or embarrassment to diminish someone or gain control over them, especially in public.",
     [],
+    { seeAlso: ["belittling", "jokes-at-your-expense"] },
   ],
   [
     "Intimidation",
@@ -323,6 +361,7 @@ const redFlagEntries: RedFlagEntry[] = [
     "Explosive anger",
     "Rage episodes: explosive anger that leaves others afraid, silenced, or focused on managing the outburst.",
     ["violence"],
+    { seeAlso: ["intimidation", "walking-on-eggshells"] },
   ],
   [
     "Reactive-abuse baiting",
@@ -358,6 +397,10 @@ const redFlagEntries: RedFlagEntry[] = [
     "Withholding as punishment or leverage",
     "Deliberately withholding contact, support, affection, approval, information, or cooperation as punishment or leverage, or making warmth or intimacy depend on someone’s compliance—keeping validation perpetually just out of reach.",
     ["possessiveness"],
+    {
+      alternateNames: ["Punitive withdrawal"],
+      seeAlso: ["silent-treatment", "stonewalling"],
+    },
   ],
   [
     "Controlling behavior",
@@ -368,6 +411,7 @@ const redFlagEntries: RedFlagEntry[] = [
     "Double standards",
     "Applying standards selectively—allowing themselves freedoms they deny you—to excuse their own actions, judge you more harshly, or avoid accountability.",
     ["accountability"],
+    { seeAlso: ["entitlement", "making-excuses"] },
   ],
   [
     "Economic sabotage",
@@ -393,6 +437,7 @@ const redFlagEntries: RedFlagEntry[] = [
     "Jealousy or possessiveness framed as care",
     "Controlling conduct portrayed as protection, care, or love.",
     ["possessiveness"],
+    { seeAlso: ["controlling-behavior", "baseless-cheating-accusations"] },
   ],
   [
     "Micromanagement",
@@ -403,6 +448,7 @@ const redFlagEntries: RedFlagEntry[] = [
     "Non-consensual location tracking",
     "Demanding access to, placing, or using an app or device to track someone's movements or location without their agreement.",
     ["possessiveness", "boundaries", "technology"],
+    { seeAlso: ["digital-stalking", "constant-check-ins"] },
   ],
   [
     "Reproductive coercion",
@@ -418,21 +464,25 @@ const redFlagEntries: RedFlagEntry[] = [
     "Undermining your other relationships",
     "Starting or escalating disputes with friends, family, or community—including picking fights before or after outings—or treating them as rivals and demanding attention, so that socializing becomes difficult and those relationships get crowded out.",
     ["isolation", "other-people", "possessiveness"],
+    { seeAlso: ["social-isolation", "discrediting-friends-and-family"] },
   ],
   [
     "Creating dependency",
     "Systematically making you more reliant on them financially, socially, practically, or emotionally.",
     ["isolation", "possessiveness"],
+    { seeAlso: ["social-isolation", "economic-sabotage"] },
   ],
   [
     "Constant check-ins",
     "Continually demanding updates about someone's whereabouts or activities, with immediate response expectations, or otherwise demanding so much availability and attention that other relationships, responsibilities, or rest are crowded out.",
     ["isolation", "possessiveness"],
+    { seeAlso: ["non-consensual-location-tracking", "digital-stalking"] },
   ],
   [
     "Loyalty tests",
     "Requiring proofs of allegiance, or repeated or escalating demonstrations of loyalty or commitment, in ways that put relationships, values, or independence at risk.",
     ["isolation", "possessiveness"],
+    { seeAlso: ["baseless-cheating-accusations", "jealousy-tests"] },
   ],
   [
     "Discrediting friends and family",
@@ -453,11 +503,16 @@ const redFlagEntries: RedFlagEntry[] = [
     "Us against the world",
     "Isolating someone from supportive people and outside viewpoints to increase dependency.",
     ["isolation", "other-people"],
+    { seeAlso: ["social-isolation", "creating-dependency"] },
   ],
   [
     "Baseless cheating accusations",
     "Accusing someone of cheating without credible evidence, or requiring messages, photos, location details, or other evidence to prove their loyalty, to justify control, surveillance, or punishment.",
     ["possessiveness", "sexual"],
+    {
+      alternateNames: ["Demanding proof of fidelity"],
+      seeAlso: ["jealousy-tests", "retroactive-jealousy"],
+    },
   ],
   [
     "Checking your phone",
@@ -513,6 +568,10 @@ const redFlagEntries: RedFlagEntry[] = [
     "Smear campaigns",
     "Spreading damaging claims to undermine your reputation or credibility—often called character assassination—particularly after confrontation or separation.",
     ["other-people", "lying"],
+    {
+      alternateNames: ["Character assassination"],
+      seeAlso: ["triangulation", "discrediting-friends-and-family"],
+    },
   ],
   [
     "Splitting",
@@ -588,6 +647,7 @@ const redFlagEntries: RedFlagEntry[] = [
     "Targeting insecurities or past trauma",
     "Targeting someone’s confidence, identity, past trauma, or other vulnerabilities to make them easier to control.",
     [],
+    { seeAlso: ["competence-undermining", "weaponizing-therapy-language"] },
   ],
   [
     "Weaponizing therapy language",
@@ -633,6 +693,7 @@ const redFlagEntries: RedFlagEntry[] = [
     "Refusing to accept ‘no’",
     "Repeatedly disregarding a clear refusal or boundary.",
     ["boundaries"],
+    { seeAlso: ["sexual-boundary-violations", "repeated-unwanted-contact"] },
   ],
   [
     "Refusing to leave",
@@ -643,6 +704,7 @@ const redFlagEntries: RedFlagEntry[] = [
     "Repeated unwanted contact",
     "Continuing contact after a clear request to stop, or engaging in conduct that creates fear or disruption.",
     ["boundaries", "possessiveness"],
+    { seeAlso: ["stalking", "showing-up-uninvited"] },
   ],
   [
     "Sexual boundary violations",
@@ -738,11 +800,16 @@ const redFlagEntries: RedFlagEntry[] = [
     "Non-apologies",
     "Recognizable forms include “I'm sorry, but…,” “I'm sorry you feel that way,” apologies paired with blame, and apologies used to shut down discussion.",
     ["accountability"],
+    {
+      alternateNames: ["Conditional apologies"],
+      seeAlso: ["making-excuses", "using-an-apology-to-end-discussion"],
+    },
   ],
   [
     "Not getting help",
     "Repeatedly refusing appropriate support or help while ongoing harmful behavior remains unaddressed.",
     ["accountability"],
+    { seeAlso: ["promises-without-change", "lack-of-self-reflection"] },
   ],
   [
     "Performative remorse",
@@ -753,6 +820,7 @@ const redFlagEntries: RedFlagEntry[] = [
     "Promises without change",
     "Apologies or commitments to improve that are not followed by sustained behavior change.",
     ["accountability", "lying"],
+    { seeAlso: ["performative-remorse", "non-apologies"] },
   ],
   [
     "Avoiding accountability",
@@ -786,8 +854,9 @@ const redFlagEntries: RedFlagEntry[] = [
   ],
   [
     "Constant chaos",
-    "Inventing or escalating crises or emergencies (aka manufactured chaos) to gain attention, control, or compliance, keeping the relationship in a recurring state of emergency that consumes attention and resources.",
+    "Inventing or escalating crises or emergencies to gain attention, control, or compliance, keeping the relationship in a recurring state of emergency that consumes attention and resources.",
     ["lying"],
+    { alternateNames: ["Manufactured chaos"] },
   ],
   [
     "Common denominator",
@@ -818,6 +887,7 @@ const redFlagEntries: RedFlagEntry[] = [
     "Forcing digital isolation",
     "Blocking or deleting contacts, or coercing someone to block people, to limit communication or social support.",
     ["isolation", "other-people", "technology"],
+    { seeAlso: ["social-isolation", "controlling-your-social-media"] },
   ],
   [
     "Sharing private photos",
@@ -863,11 +933,46 @@ const sortKey = (title: string) =>
     .replace(/[^a-z0-9\s]/g, "")
     .trim();
 
-export const redFlags: RedFlag[] = redFlagEntries
-  .map(([title, description, tags]) => ({
+const flagsById = redFlagEntries
+  .map(([title, description, tags, metadata = {}]) => ({
     id: createId(title),
     title,
     description,
     tags,
-  }))
+    metadata,
+  }));
+
+const flagById = new Map(flagsById.map((flag) => [flag.id, flag]));
+const canonicalIds = new Set(flagById.keys());
+const aliasIds = new Set<string>();
+
+export const redFlags: RedFlag[] = flagsById
+  .map((flag) => {
+    const alternateNames = flag.metadata.alternateNames ?? [];
+    const alternateNameLinks = alternateNames.map((title) => {
+      const id = slugify(title);
+
+      if (!id || canonicalIds.has(id) || aliasIds.has(id)) {
+        throw new Error(`Duplicate or invalid alternate name: ${title}`);
+      }
+
+      aliasIds.add(id);
+      return { id, title };
+    });
+    const seeAlso = (flag.metadata.seeAlso ?? []).map((id) => {
+      if (id === flag.id) {
+        throw new Error(`A red flag cannot link to itself: ${flag.title}`);
+      }
+
+      const target = flagById.get(id);
+      if (!target) {
+        throw new Error(`Unknown see-also target: ${id}`);
+      }
+
+      return { id: target.id, title: target.title };
+    });
+
+    const { metadata: _metadata, ...redFlag } = flag;
+    return { ...redFlag, alternateNames, alternateNameLinks, seeAlso };
+  })
   .sort((a, b) => sortKey(a.title).localeCompare(sortKey(b.title)));

@@ -170,6 +170,16 @@ li {
   color: var(--color-link);
   text-decoration: underline;
 }
+.red-flag-aliases,
+.red-flag-see-also {
+  font-size: 0.95em;
+}
+.red-flag-aliases {
+  color: var(--color-text-primary);
+}
+.red-flag-see-also::before {
+  content: " — ";
+}
 
 /* Tag filters */
 .tag-filters {

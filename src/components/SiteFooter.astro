@@ -1,0 +1,23 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <nav aria-label="Site information">
+    <a href="https://github.com/sampl/wow-red-flag">Source</a>
+    <a href="https://github.com/sampl/wow-red-flag/issues">Suggest a change</a>
+    <a href="https://github.com/sampl/wow-red-flag/blob/main/CONDUCT.md"
+      >Code of Conduct</a
+    >
+    <a href="https://github.com/sampl/wow-red-flag/blob/main/CONTRIBUTING.md"
+      >Contributing</a
+    >
+  </nav>
+  <p class="basement">
+    © 2022{currentYear > 2022 ? `–${currentYear}` : ""}{" "}
+    <a href="https://directedworks.com">Directed Works LLC</a>. Content is
+    licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/"
+      >CC BY-SA 4.0</a
+    >.
+  </p>
+</footer>

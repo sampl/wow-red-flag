@@ -172,11 +172,27 @@ for (let gifIndex = 0; gifIndex < interludeGifs.length; gifIndex++) {
                   </figure>
                 </li>
               )}
-              <li class="red-flag" id={flag.id} data-tags={flag.tags.join(" ")}>
+              <li
+                class="red-flag"
+                id={flag.id}
+                data-aliases={flag.alternateNameLinks.map((link) => link.id).join(" ")}
+                data-tags={flag.tags.join(" ")}
+              >
                 <strong>
                   <a href={`#${flag.id}`}>{flag.title}</a>
-                </strong>{" "}
-                — {flag.description}
+                </strong>
+                {flag.alternateNameLinks.length > 0 && (
+                  <span class="red-flag-aliases">
+                    {" "}({flag.alternateNameLinks.map((link, aliasIndex) => (
+                      <>
+                        {aliasIndex > 0 && ", "}
+                        <a href={`#${link.id}`}>{link.title}</a>
+                      </>
+                    ))})
+                  </span>
+                )}
+                {" "}— {flag.description}
+                {/* TODO: Restore the inline see-also links when they should be visible again. */}
               </li>
             </>
           );
@@ -232,4 +248,24 @@ for (let gifIndex = 0; gifIndex < interludeGifs.length; gifIndex++) {
       applyFilter();
     });
   });
+
+  const resolveAliasHash = () => {
+    const hash = decodeURIComponent(window.location.hash.slice(1));
+    if (!hash || flags.some((flag) => flag.id === hash)) {
+      return;
+    }
+
+    const target = flags.find((flag) =>
+      (flag.dataset.aliases?.split(" ") ?? []).includes(hash),
+    );
+    if (!target) {
+      return;
+    }
+
+    history.replaceState(null, "", `#${target.id}`);
+    target.scrollIntoView({ block: "center" });
+  };
+
+  window.addEventListener("hashchange", resolveAliasHash);
+  resolveAliasHash();
 </script>
