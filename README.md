@@ -7,7 +7,7 @@
 
 A list of patterns found in difficult relationships.
 
-Live at **[🌐 wowredflag.com](wowredflag.com) ➡️**
+Live at **[wowredflag.com](wowredflag.com) ➡️**
 
 ## Documentation
 
