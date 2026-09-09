@@ -1,6 +1,10 @@
 ---
-import { redFlags, TAGS } from "../data/redFlags";
+import { redFlags } from "../data/redFlags";
+import { TAGS } from "../data/tags";
 import GiphyEmbed from "../components/GiphyEmbed.astro";
+import IntroHeader from "../components/IntroHeader.astro";
+import MoreResources from "../components/MoreResources.astro";
+import SafetyNotice from "../components/SafetyNotice.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const interludeGifs = [
@@ -132,13 +136,7 @@ for (let gifIndex = 0; gifIndex < interludeGifs.length; gifIndex++) {
   description="A list of patterns found in difficult relationships."
 >
   <article class="content-card">
-    <header class="intro">
-      <img class="logo" src="/icon.png" width="160" height="160" alt="A red flag" />
-      <h1>“Wow, red flag…”</h1>
-      <p class="subheading">
-        Behaviors & personality attributes of toxic relationships
-      </p>
-    </header>
+    <IntroHeader />
 
     <div class="tag-filters" role="group" aria-label="Filter by tag">
       {
@@ -186,54 +184,8 @@ for (let gifIndex = 0; gifIndex < interludeGifs.length; gifIndex++) {
       }
     </ul>
 
-    <aside class="safety-notice" aria-label="Are you or a loved one in danger?">
-      <p>
-        This site offers general educational information, not a diagnosis or
-        medical, mental-health, legal, or professional advice. Every
-        relationship and situation is different.
-      </p>
-      <p>
-        <strong>Are you or a loved one in danger?</strong> Call your local
-        emergency number, or the US National Domestic Violence Hotline at <a
-          href="tel:8007997233">800-799-7233</a
-        >.
-      </p>
-    </aside>
-
-    <section aria-labelledby="resources">
-      <h2 id="resources">
-        <a
-          class="heading-anchor"
-          href="#resources"
-          aria-label="Link to More resources">#</a
-        >
-        More resources
-      </h2>
-      <ul>
-        <li>
-          <a href="https://www.highconflictinstitute.com/podcast/"
-            >It’s All Your Fault: High Conflict People podcast</a
-          >
-        </li>
-        <li>
-          <a href="https://www.jeffersonfisher.com/podcast"
-            >The Jefferson Fisher Podcast</a
-          >
-        </li>
-        <li>
-          <a href="https://www.reddit.com/r/BPDlovedones/">r/BPDlovedones</a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/@DoctorRamani"
-            >Dr. Ramani on YouTube</a>
-        </li>
-        <li>
-          <a href="https://www.hbo.com/the-vow"
-            >The Vow — HBO documentary series</a
-          >
-        </li>
-      </ul>
-    </section>
+    <SafetyNotice />
+    <MoreResources />
   </article>
 </BaseLayout>
 
