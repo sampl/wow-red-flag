@@ -5,8 +5,9 @@
   "description": "A list of patterns found in difficult relationships.",
   "homepage": "https://wowredflag.com/",
   "type": "module",
+  "packageManager": "pnpm@9.15.9",
   "scripts": {
-    "start": "npm run dev",
+    "start": "pnpm run dev",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
