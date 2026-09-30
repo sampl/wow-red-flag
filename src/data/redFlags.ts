@@ -933,14 +933,15 @@ const sortKey = (title: string) =>
     .replace(/[^a-z0-9\s]/g, "")
     .trim();
 
-const flagsById = redFlagEntries
-  .map(([title, description, tags, metadata = {}]) => ({
+const flagsById = redFlagEntries.map(
+  ([title, description, tags, metadata = {}]) => ({
     id: createId(title),
     title,
     description,
     tags,
     metadata,
-  }));
+  }),
+);
 
 const flagById = new Map(flagsById.map((flag) => [flag.id, flag]));
 const canonicalIds = new Set(flagById.keys());

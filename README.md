@@ -7,13 +7,27 @@
 
 A list of patterns found in difficult relationships.
 
-Live at **[wowredflag.com](wowredflag.com) ➡️**
+Live at **[wowredflag.com](https://wowredflag.com) ➡️**
+
+## Browsing
+
+- Filter by one tag at a time; click the selected tag or its × to show all patterns again.
+- Pattern links and alternate names open the canonical pattern and clear filters, including when using browser history. Invalid links leave filters unchanged.
+- Safety guidance appears before the patterns.
+- Decorative GIFs load lazily, cannot receive keyboard focus, and are suppressed when reduced motion is preferred. Preference changes take effect without reloading.
+- The pattern list and direct canonical links remain available without JavaScript.
 
 ## Documentation
 
 - [CONTRIBUTING.md](CONTRIBUTING.md) to suggest a change
 - [CONDUCT.md](CONDUCT.md) for community standards
 - [DEVELOPERS.md](DEVELOPERS.md) for dev instructions
+
+## Intentionally skipped
+
+- Dark mode: the site uses a light theme only.
+- Search and copy-link controls.
+- Architecture review.
 
 ## License
 
