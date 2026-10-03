@@ -137,6 +137,7 @@ for (let gifIndex = 0; gifIndex < interludeGifs.length; gifIndex++) {
 >
   <article class="content-card">
     <IntroHeader />
+    <SafetyNotice />
 
     <div class="tag-filters" role="group" aria-label="Filter by tag">
       {
@@ -163,7 +164,7 @@ for (let gifIndex = 0; gifIndex < interludeGifs.length; gifIndex++) {
           return (
             <>
               {gif && (
-                <li class="gif-slot" data-gif aria-hidden="true">
+                <li class="gif-slot" data-gif aria-hidden="true" inert>
                   <figure
                     class="interlude-gif"
                     style={`--gif-rotation: ${rotation}`}
@@ -200,72 +201,65 @@ for (let gifIndex = 0; gifIndex < interludeGifs.length; gifIndex++) {
       }
     </ul>
 
-    <SafetyNotice />
     <MoreResources />
   </article>
 </BaseLayout>
 
 <script>
-  const pills = [...document.querySelectorAll(".tag-pill")].filter(
-    (el) => el instanceof HTMLElement,
-  );
-  const flags = [...document.querySelectorAll(".red-flag")].filter(
-    (el) => el instanceof HTMLElement,
-  );
-  const gifSlots = [...document.querySelectorAll(".gif-slot")].filter(
-    (el) => el instanceof HTMLElement,
-  );
+  import { createPatternBrowser } from "../patternBrowser";
+  import { initializeDecorativeMedia } from "../decorativeMedia";
 
-  let activeTag = null;
+  const tagPills = [...document.querySelectorAll<HTMLButtonElement>(".tag-pill")];
+  const patternElements = [...document.querySelectorAll<HTMLElement>(".red-flag")];
+  const gifSlots = [...document.querySelectorAll<HTMLElement>(".gif-slot")];
+  const gifFrames = [...document.querySelectorAll<HTMLIFrameElement>(".giphy-embed")];
+  const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const browser = createPatternBrowser(patternElements.map((pattern) => ({
+    id: pattern.id,
+    aliases: pattern.dataset.aliases?.split(" ").filter(Boolean) ?? [],
+    tags: pattern.dataset.tags?.split(" ").filter(Boolean) ?? [],
+  })));
 
-  const applyFilter = () => {
-    if (!activeTag) {
-      flags.forEach((flag) => {
-        flag.hidden = false;
-      });
-      gifSlots.forEach((slot) => {
-        slot.hidden = false;
-      });
-      return;
+  const render = () => {
+    const state = browser.snapshot();
+    const visibleIds = new Set(state.visibleIds);
+    for (const pattern of patternElements) pattern.hidden = !visibleIds.has(pattern.id);
+    for (const pill of tagPills) {
+      pill.setAttribute("aria-pressed", String(pill.dataset.tag === state.selectedTag));
     }
-
-    gifSlots.forEach((slot) => {
-      slot.hidden = true;
-    });
-    flags.forEach((flag) => {
-      const tags = flag.dataset.tags?.split(" ") ?? [];
-      flag.hidden = !tags.includes(activeTag);
-    });
+    for (const slot of gifSlots) slot.hidden = !!state.selectedTag || motionPreference.matches;
   };
 
-  pills.forEach((pill) => {
+  for (const pill of tagPills) {
     pill.addEventListener("click", () => {
-      const tag = pill.dataset.tag ?? null;
-      activeTag = activeTag === tag ? null : tag;
-      pills.forEach((p) => {
-        p.setAttribute("aria-pressed", String(p.dataset.tag === activeTag));
-      });
-      applyFilter();
+      if (pill.dataset.tag) browser.toggleTag(pill.dataset.tag);
+      render();
     });
-  });
-
-  const resolveAliasHash = () => {
-    const hash = decodeURIComponent(window.location.hash.slice(1));
-    if (!hash || flags.some((flag) => flag.id === hash)) {
-      return;
+  }
+  const navigateToPattern = (fragment = window.location.hash) => {
+    const navigation = browser.navigate(fragment);
+    for (const pattern of patternElements) {
+      pattern.toggleAttribute("data-linked-pattern", pattern.id === navigation?.targetId);
     }
-
-    const target = flags.find((flag) =>
-      (flag.dataset.aliases?.split(" ") ?? []).includes(hash),
-    );
-    if (!target) {
-      return;
-    }
-
-    history.replaceState(null, "", `#${target.id}`);
-    target.scrollIntoView({ block: "center" });
+    if (!navigation) return false;
+    render();
+    const canonicalHash = `#${navigation.targetId}`;
+    if (window.location.hash !== canonicalHash) history.replaceState(null, "", canonicalHash);
+    document.getElementById(navigation.targetId)?.scrollIntoView({ block: "center" });
+    return true;
   };
 
-  window.addEventListener("hashchange", resolveAliasHash);
-  resolveAliasHash();
+  // Repeated clicks on the current fragment do not emit hashchange.
+  for (const link of document.querySelectorAll<HTMLAnchorElement>(".red-flag a")) {
+    link.addEventListener("click", (event) => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const fragment = link.hash;
+      if (window.location.hash !== fragment) history.pushState(null, "", fragment);
+      if (navigateToPattern(fragment)) event.preventDefault();
+    });
+  }
+  window.addEventListener("hashchange", () => navigateToPattern(window.location.hash));
+  window.addEventListener("popstate", () => navigateToPattern(window.location.hash));
+  initializeDecorativeMedia(gifFrames, motionPreference, render);
+  navigateToPattern(window.location.hash);
 </script>

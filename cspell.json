@@ -29,7 +29,8 @@
     "Schroedinger",
     "scorekeeping",
     "sealioning",
-    "whataboutism"
+    "whataboutism",
+    "gaslighting"
   ],
   "ignorePaths": ["node_modules/**", "dist/**", "pnpm-lock.yaml", "LICENSE.md"]
 }
