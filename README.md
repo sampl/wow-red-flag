@@ -7,7 +7,7 @@
 
 A list of patterns found in difficult relationships.
 
-Live at **[wowredflag.com](wowredflag.com) ➡️**
+Live at **[wowredflag.com](https://wowredflag.com) ➡️**
 
 ## Documentation
 
@@ -26,3 +26,25 @@ This site offers general educational information, not a diagnosis or medical, me
 ### Are you or a loved one in physical danger?
 
 Call your local emergency number. In the United States, you can also contact the National Domestic Violence Hotline at [800-799-7233](tel:8007997233).
+
+## Release planning
+
+- [STRATEGY.md](STRATEGY.md) — Scope, audience, and learning goals
+- [PITCH.md](PITCH.md) — Public-facing promise
+- [LAUNCH.md](LAUNCH.md) — Friendly alpha plan
+- [RELEASE.md](RELEASE.md) — Readiness evidence and remaining gates
+
+## Intentionally skipped
+
+This release is a free static reading resource. The following release checklist items are intentionally skipped:
+
+- Authentication, accounts, organizations, teams, product folders, persisted projects, and project CRUD: readers do not create private work or need identity.
+- Account onboarding and a dashboard checklist: reading begins directly on the page.
+- Paid entitlements, upgrades, pricing pages, and password-protected subscription mocks: there is no paid tier. The newsletter is an email subscription, not a product entitlement.
+- Database migrations and import/export tools: there is no database or user-created work.
+- Platform debug drawer, stored-state inspection, secret feature flags, and mocked entitlements: the site has no stored application state or secret features.
+- Application, route, and action loading/error screens: the reading experience is static HTML with synchronous local filters. Newsletter submission uses Formspree's hosted response; that flow still needs release verification.
+- Guide videos: no guided setup is required; revisit if alpha readers need help.
+- Secret storage in 1Password: no application secrets are present. Any future secret must use environment configuration and be stored in 1Password.
+
+Persistent sharing uses pattern fragment URLs. Feedback uses GitHub issues, and contact/help is available through Directed Works.

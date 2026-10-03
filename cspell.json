@@ -12,12 +12,24 @@
     "negging",
     "sampl",
     "stonewalling",
-    "wowredflag"
+    "wowredflag",
+    "breadcrumbing",
+    "DARVO",
+    "Dlovedones",
+    "gatekeeping",
+    "gifs",
+    "infantilization",
+    "Karpman",
+    "pathologize",
+    "pathologizing",
+    "personhood",
+    "Ramani",
+    "Reddick",
+    "Schitt",
+    "Schroedinger",
+    "scorekeeping",
+    "sealioning",
+    "whataboutism"
   ],
-  "ignorePaths": [
-    "node_modules/**",
-    "dist/**",
-    "pnpm-lock.yaml",
-    "LICENSE.md"
-  ]
+  "ignorePaths": ["node_modules/**", "dist/**", "pnpm-lock.yaml", "LICENSE.md"]
 }
